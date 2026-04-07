@@ -7,9 +7,9 @@ Fetches IGHV3-* alleles from OGRDB, saves gapped/ungapped FASTA + CSV.
 Input:
     - (none) : API에서 직접 다운로드
 Output:
-    - VH3_alleles_gapped.fasta   : gap 포함 FASTA
-    - VH3_alleles_ungapped.fasta : gap 제거 FASTA
-    - VH3_alleles_summary.csv    : allele 요약 CSV (allele, gapped_length, ungapped_length, sequence)
+    - 01_VH3_alleles_gapped.fasta   : gap 포함 FASTA
+    - 01_VH3_alleles_ungapped.fasta : gap 제거 FASTA
+    - 01_VH3_alleles_summary.csv    : allele 요약 CSV (allele, gapped_length, ungapped_length, sequence)
 
 Usage:
     python 01_fetch_vh3_alleles.py
@@ -25,9 +25,9 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 OGRDB_URL = "https://ogrdb.airr-community.org/api_v2/germline/set/9606.IGH_VDJ/latest/gapped"
 
-OUT_GAPPED   = os.path.join(SCRIPT_DIR, "VH3_alleles_gapped.fasta")
-OUT_UNGAPPED = os.path.join(SCRIPT_DIR, "VH3_alleles_ungapped.fasta")
-OUT_CSV      = os.path.join(SCRIPT_DIR, "VH3_alleles_summary.csv")
+OUT_GAPPED   = os.path.join(SCRIPT_DIR, "01_VH3_alleles_gapped.fasta")
+OUT_UNGAPPED = os.path.join(SCRIPT_DIR, "01_VH3_alleles_ungapped.fasta")
+OUT_CSV      = os.path.join(SCRIPT_DIR, "01_VH3_alleles_summary.csv")
 
 
 def fetch_url(url: str) -> str:

@@ -6,10 +6,10 @@ Calculates amino acid proportions at each IMGT position.
 Gaps ('-') are excluded from proportion calculations.
 
 Input:
-    - VH3_unique_imgt.csv : IMGT 넘버링이 적용된 unique 서열 CSV (03_imgt_numbering.py 출력)
+    - 03_VH3_unique_imgt.csv : IMGT 넘버링이 적용된 unique 서열 CSV (03_imgt_numbering.py 출력)
 Output:
-    - VH3_imgt_aa_proportion.csv      : wide format (rows=position, cols=amino acid)
-    - VH3_imgt_aa_proportion_long.csv : long format (position, amino_acid, count, proportion)
+    - 04_VH3_imgt_aa_proportion.csv      : wide format (rows=position, cols=amino acid)
+    - 04_VH3_imgt_aa_proportion_long.csv : long format (position, amino_acid, count, proportion)
 
 Usage:
     python 04_aa_proportion.py
@@ -20,9 +20,9 @@ import os
 from collections import Counter
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-IN_CSV     = os.path.join(SCRIPT_DIR, "VH3_unique_imgt.csv")
-OUT_WIDE   = os.path.join(SCRIPT_DIR, "VH3_imgt_aa_proportion.csv")
-OUT_LONG   = os.path.join(SCRIPT_DIR, "VH3_imgt_aa_proportion_long.csv")
+IN_CSV     = os.path.join(SCRIPT_DIR, "03_VH3_unique_imgt.csv")
+OUT_WIDE   = os.path.join(SCRIPT_DIR, "04_VH3_imgt_aa_proportion.csv")
+OUT_LONG   = os.path.join(SCRIPT_DIR, "04_VH3_imgt_aa_proportion_long.csv")
 
 AA_ORDER = list("ACDEFGHIKLMNPQRSTVWY") + ["X", "*"]
 

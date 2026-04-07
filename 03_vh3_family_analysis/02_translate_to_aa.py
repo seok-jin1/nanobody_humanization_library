@@ -6,9 +6,9 @@ Translates DNA sequences to amino acids using standard genetic code.
 Unrecognized codons are marked as 'X', stop codons as '*'.
 
 Input:
-    - VH3_alleles_summary.csv : 01_fetch_vh3_alleles.py 에서 생성된 allele 요약 CSV
+    - 01_VH3_alleles_summary.csv : 01_fetch_vh3_alleles.py 에서 생성된 allele 요약 CSV
 Output:
-    - VH3_alleles_summary.csv : aa_sequence 컬럼이 추가(또는 갱신)된 동일 파일 (in-place)
+    - 01_VH3_alleles_summary.csv : aa_sequence 컬럼이 추가(또는 갱신)된 동일 파일 (in-place)
 
 Usage:
     python 02_translate_to_aa.py
@@ -37,7 +37,7 @@ CODON_TABLE = {
 }
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-CSV_PATH   = os.path.join(SCRIPT_DIR, "VH3_alleles_summary.csv")
+CSV_PATH   = os.path.join(SCRIPT_DIR, "01_VH3_alleles_summary.csv")
 
 
 def translate(dna: str) -> str:

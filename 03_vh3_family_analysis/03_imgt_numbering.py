@@ -6,10 +6,10 @@ Applies IMGT numbering to unique VH3 sequences via ANARCI.
 Extracts unique amino acid sequences and assigns IMGT position labels.
 
 Input:
-    - VH3_alleles_summary.csv : aa_sequence 컬럼이 포함된 allele 요약 CSV (02_translate_to_aa.py 출력)
+    - 01_VH3_alleles_summary.csv : aa_sequence 컬럼이 포함된 allele 요약 CSV (02_translate_to_aa.py 출력)
 Output:
-    - VH3_unique_imgt.csv  : unique 서열별 IMGT position 컬럼 CSV
-    - VH3_unique.fasta     : unique 서열 FASTA
+    - 03_VH3_unique_imgt.csv  : unique 서열별 IMGT position 컬럼 CSV
+    - 03_VH3_unique.fasta     : unique 서열 FASTA
 
 Usage:
     python 03_imgt_numbering.py
@@ -22,9 +22,9 @@ from collections import defaultdict
 import anarci
 
 SCRIPT_DIR   = os.path.dirname(os.path.abspath(__file__))
-IN_CSV       = os.path.join(SCRIPT_DIR, "VH3_alleles_summary.csv")
-OUT_CSV      = os.path.join(SCRIPT_DIR, "VH3_unique_imgt.csv")
-OUT_FASTA    = os.path.join(SCRIPT_DIR, "VH3_unique.fasta")
+IN_CSV       = os.path.join(SCRIPT_DIR, "01_VH3_alleles_summary.csv")
+OUT_CSV      = os.path.join(SCRIPT_DIR, "03_VH3_unique_imgt.csv")
+OUT_FASTA    = os.path.join(SCRIPT_DIR, "03_VH3_unique.fasta")
 
 
 # ── 1. unique 서열 추출 ────────────────────────────────────────────────────────
