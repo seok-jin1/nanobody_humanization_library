@@ -12,6 +12,8 @@ Input:
 Output:
     - 01_mutations_final.txt : Rosetta mutation format file
       (each line: WT_residue position MUT_residue)
+    - 01_imgt_pdb_mapping.csv : full IMGT ↔ PDB sequential position
+      mapping table for all 125 residues
 
 Usage:
     python 01_fix_imgt_numbering.py
@@ -20,6 +22,8 @@ Dependencies:
     anarci
 """
 
+import csv
+import os
 import sys
 
 try:
@@ -27,6 +31,8 @@ try:
 except ImportError:
     print("ERROR: anarci is required. Install with: pip install anarci")
     sys.exit(1)
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 TARGET_SEQ = "QVQLQESGGGSVQAGGSLRLSCAASGYTVRSSYMGWFRQVPGKQREAVAIITSGGTTYYADSVKGRFTISRDNAKNTLYLQMNSLKPEDTAMYYCAGRTGFIGGIWFRDRDYDYWGQGTQVTVSS"
 
@@ -52,8 +58,27 @@ MUTATIONS_IMGT = [
 OUTPUT_FILE = "01_mutations_final.txt"
 
 
+IMGT_REGIONS = {
+    "FR1": (1, 26), "CDR1": (27, 38), "FR2": (39, 55),
+    "CDR2": (56, 65), "FR3": (66, 104), "CDR3": (105, 117), "FR4": (118, 128),
+}
+
+
+def get_region(pos):
+    """Return IMGT region name for a given position number."""
+    for name, (s, e) in IMGT_REGIONS.items():
+        if s <= pos <= e:
+            return name
+    return "?"
+
+
 def build_imgt_to_seq_map(sequence):
-    """Use ANARCI to build IMGT position → sequential position mapping."""
+    """Use ANARCI to build IMGT position → sequential position mapping.
+
+    Returns:
+        imgt_to_seq: dict mapping IMGT main positions to (seq_pos, aa)
+        full_mapping: list of (pdb_pos, aa, imgt_label, ins, region) for all residues
+    """
     numbered, _, _ = anarci.anarci(
         [("nanobody", sequence)],
         scheme="imgt",
@@ -67,21 +92,25 @@ def build_imgt_to_seq_map(sequence):
 
     domain, start, _ = numbered[0][0]
 
-    # Build mapping: IMGT position (int) → (sequential_pos, amino_acid)
-    # All non-gap residues increment sequential index (including insertions)
     imgt_to_seq = {}
-    seq_idx = start  # ANARCI returns 0-based start index into the sequence
+    full_mapping = []
+    seq_idx = start
 
     for (pos, ins), aa in domain:
         if aa == "-":
-            continue  # gap in IMGT numbering, no residue
+            continue
         seq_pos = seq_idx + 1  # 1-based PDB position
-        # Only store main positions (no insertion code) for framework mutations
-        if not ins.strip():
-            imgt_to_seq[pos] = (seq_pos, aa)
-        seq_idx += 1  # always increment for non-gap residues
+        ins_str = ins.strip()
+        imgt_label = f"{pos}{ins_str}" if ins_str else str(pos)
+        region = get_region(pos)
 
-    return imgt_to_seq
+        full_mapping.append((seq_pos, aa, imgt_label, ins_str, region))
+
+        if not ins_str:
+            imgt_to_seq[pos] = (seq_pos, aa)
+        seq_idx += 1
+
+    return imgt_to_seq, full_mapping
 
 
 def main():
@@ -91,7 +120,7 @@ def main():
 
     # Step 1: Build IMGT → sequential mapping via ANARCI
     print("Running ANARCI (IMGT scheme)...")
-    imgt_to_seq = build_imgt_to_seq_map(TARGET_SEQ)
+    imgt_to_seq, full_mapping = build_imgt_to_seq_map(TARGET_SEQ)
     print(f"  Mapped {len(imgt_to_seq)} IMGT positions to sequential positions.")
     print()
 
@@ -142,12 +171,26 @@ def main():
     # Step 4: Print mapping summary table
     print(f"\n{'IMGT':>6} {'Region':>6} {'WT':>3}→{'MUT':>3} {'SeqPos':>6}")
     print("-" * 35)
-    regions = {range(1, 27): "FR1", range(27, 39): "CDR1", range(39, 56): "FR2",
-               range(56, 66): "CDR2", range(66, 105): "FR3", range(105, 118): "CDR3",
-               range(118, 129): "FR4"}
     for wt, seq_pos, mut, imgt_pos in verified:
-        region = next((r for rng, r in regions.items() if imgt_pos in rng), "?")
+        region = get_region(imgt_pos)
         print(f"{imgt_pos:>6} {region:>6} {wt:>3}→{mut:>3} {seq_pos:>6}")
+
+    # Step 5: Save full IMGT ↔ PDB mapping table as CSV
+    mutations_dict = {imgt: mut for _, imgt, mut in MUTATIONS_IMGT}
+    mapping_csv = os.path.join(SCRIPT_DIR, "01_imgt_pdb_mapping.csv")
+    with open(mapping_csv, "w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["pdb_pos", "aa", "imgt_pos", "insertion", "region", "mutation"])
+        for pdb_pos, aa, imgt_label, ins, region in full_mapping:
+            # Check if this position has a humanization mutation
+            imgt_num = int("".join(c for c in imgt_label if c.isdigit()))
+            mut = ""
+            if not ins and imgt_num in mutations_dict:
+                mut = f"{aa}→{mutations_dict[imgt_num]}"
+            writer.writerow([pdb_pos, aa, imgt_label, ins, region, mut])
+
+    print(f"\n✓ Created: {mapping_csv}")
+    print(f"  Full IMGT ↔ PDB mapping ({len(full_mapping)} residues)")
 
 
 if __name__ == "__main__":
