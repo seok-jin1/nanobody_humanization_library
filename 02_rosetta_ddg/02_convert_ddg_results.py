@@ -7,14 +7,15 @@ calculates mean ddG values relative to the wild-type baseline with
 propagated standard deviations, and writes standardized predictions.
 
 Input:
-    - <ddg_file> : Rosetta .ddg output file (e.g., mutations_final.ddg,
-      mutations_set2.ddg) provided as CLI argument
+    - <ddg_file> : Rosetta .ddg output file provided as CLI argument
+      (e.g., 02_mutations_final.ddg, 02_mutations_set2.ddg)
 Output:
     - 02_ddg_predictions.out : standardized ddG predictions
       (format: ddG: mutation_name mean_ddG std_dev)
 
 Usage:
-    python 02_convert_ddg_results.py mutations_final.ddg
+    python 02_convert_ddg_results.py 02_mutations_final.ddg
+    python 02_convert_ddg_results.py 02_mutations_set2.ddg
 """
 
 import sys
@@ -23,7 +24,7 @@ from collections import defaultdict
 import numpy as np
 
 def parse_ddg_file(ddg_file):
-    """Parse mutations_final.ddg and calculate ddG values."""
+    """Parse .ddg file and calculate ddG values."""
     energies = defaultdict(list)
     
     with open(ddg_file, 'r') as f:
@@ -80,7 +81,7 @@ def calculate_ddg(energies):
 
 def main():
     if len(sys.argv) < 2:
-        print("Usage: python 02_convert_ddg_results.py mutations_final.ddg")
+        print("Usage: python 02_convert_ddg_results.py 02_mutations_final.ddg")
         sys.exit(1)
     
     ddg_file = sys.argv[1]
