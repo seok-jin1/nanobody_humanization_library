@@ -1,0 +1,19 @@
+# Large GROMACS trajectory/binary files
+05_gromacs_mmpbsa/*.xtc
+05_gromacs_mmpbsa/*.trr
+05_gromacs_mmpbsa/*.edr
+05_gromacs_mmpbsa/*.tpr
+05_gromacs_mmpbsa/*.gro
+05_gromacs_mmpbsa/*.cpt
+05_gromacs_mmpbsa/*.log
+
+# SAbDab PDB structures (too large for git, ~9 GB)
+04_sabdab_nano_analysis/pdbs/
+04_sabdab_nano_analysis/chothia/
+04_sabdab_nano_analysis/imgt/
+04_sabdab_nano_analysis/*.zip
+
+# System files
+.claude/
+__pycache__/
+*.pyc

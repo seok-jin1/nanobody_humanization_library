@@ -1,0 +1,13 @@
+Input file for gmx_MMPBSA - Nanobody Stability (WT)
+&general
+   sys_name = "Nanobody_AF3",
+   startframe = 1,
+   endframe = 2000,
+   interval = 5,
+   temperature = 300,
+   forcefields = "oldff/leaprc.ff99SB-ILDN",
+/
+&gb
+   igb = 2,
+   saltcon = 0.150,
+/

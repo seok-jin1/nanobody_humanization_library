@@ -1,0 +1,4 @@
+; ions.mdp - minimal settings for ion addition
+integrator  = steep
+nsteps      = 0
+pbc         = xyz
