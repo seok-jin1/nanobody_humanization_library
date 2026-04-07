@@ -184,7 +184,8 @@ def main():
 
     plt.tight_layout()
     plt.savefig(OUTPUT_PLOT, dpi=300, bbox_inches='tight')
-    print(f"   Saved plot to {OUTPUT_PLOT}")
+    plt.savefig(OUTPUT_PLOT.replace('.png', '.pdf'), dpi=300, bbox_inches='tight')
+    print(f"   Saved plot to {OUTPUT_PLOT} / .pdf")
     print("Done.")
 
 

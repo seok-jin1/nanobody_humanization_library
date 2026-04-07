@@ -162,7 +162,8 @@ def main():
         
     plt.tight_layout()
     plt.savefig(OUTPUT_PLOT, dpi=300)
-    print(f"   Saved heatmap to {OUTPUT_PLOT}")
+    plt.savefig(OUTPUT_PLOT.replace('.png', '.pdf'), dpi=300)
+    print(f"   Saved heatmap to {OUTPUT_PLOT} / .pdf")
 
 if __name__ == "__main__":
     main()

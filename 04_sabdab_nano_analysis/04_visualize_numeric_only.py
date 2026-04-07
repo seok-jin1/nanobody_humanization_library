@@ -124,7 +124,13 @@ def main():
     
     plt.tight_layout()
     plt.savefig(OUTPUT_PLOT, dpi=300)
-    print(f"Numeric-only visualization saved to {OUTPUT_PLOT}")
+    plt.savefig(OUTPUT_PLOT.replace('.png', '.pdf'), dpi=300)
+    print(f"Numeric-only visualization saved to {OUTPUT_PLOT} / .pdf")
+
+    # Save plot data as CSV
+    plot_df = pd.DataFrame({'position': numeric_positions, 'entropy': entropy_list, **prop_data})
+    plot_df.to_csv('04_plot_data.csv', index=False)
+    print(f"Plot data saved to 04_plot_data.csv")
 
 if __name__ == "__main__":
     main()
