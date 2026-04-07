@@ -1,7 +1,17 @@
 #!/usr/bin/env python3
 """
-Summarize gmx_MMPBSA mutation stability results.
-ΔΔG = ΔG(mutant) - ΔG(WT)
+WT 및 돌연변이 MM-PBSA 안정성 결과 요약 (단순 버전)
+
+Summarizes gmx_MMPBSA stability results, calculates DDG = DG(mut) - DG(WT).
+
+Input:
+    - mmpbsa_WT/FINAL_RESULTS.dat : WT MMPBSA result
+    - mmpbsa_<MUT>/FINAL_RESULTS.dat : 13 mutant MMPBSA results
+Output:
+    - 02_mmpbsa_summary.txt : CSV format summary (Mutation, Position, DDG)
+
+Usage:
+    python 02_summarize_mmpbsa.py
 """
 
 import os
@@ -70,11 +80,11 @@ def main():
     print("=" * 70)
 
     # Save to file
-    with open(f"{base_dir}/mmpbsa_summary.txt", "w") as f:
+    with open(f"{base_dir}/02_mmpbsa_summary.txt", "w") as f:
         f.write("Mutation,Position,DDG_kcal_mol\n")
         for mut, pos, ddg in results:
             f.write(f"{mut},{pos},{ddg:.3f}\n")
-    print("Results saved to: mmpbsa_summary.txt")
+    print("Results saved to: 02_mmpbsa_summary.txt")
 
 if __name__ == "__main__":
     main()

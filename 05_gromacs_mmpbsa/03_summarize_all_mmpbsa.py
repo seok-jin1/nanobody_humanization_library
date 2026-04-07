@@ -1,10 +1,18 @@
 #!/usr/bin/env python3
 """
-Summarize WT + 13 mutant MMPBSA stability results.
-ΔΔG = ΔG(mutant) - ΔG(WT)  [kcal/mol]
+WT 및 돌연변이 MM-PBSA 안정성 결과 요약 (오차 전파 포함)
 
-WT: last 10 ns of 100 ns trajectory  (mmpbsa_WT/FINAL_RESULTS.dat)
-Mutants: 10 ns trajectory each       (mutants/<NAME>/mmpbsa/FINAL_RESULTS.dat)
+Enhanced MMPBSA summary with error propagation (std dev tracking).
+DDG = DG(mutant) - DG(WT), with propagated uncertainty.
+
+Input:
+    - mmpbsa_WT/FINAL_RESULTS.dat : WT MMPBSA result (last 10 ns of 100 ns trajectory)
+    - mutants/<MUT>/mmpbsa/FINAL_RESULTS.dat : 13 mutant MMPBSA results (10 ns each)
+Output:
+    - 03_mmpbsa_ddg_summary.csv : CSV with DeltaG, Std, DeltaDeltaG, Error
+
+Usage:
+    python 03_summarize_all_mmpbsa.py
 """
 
 import os
@@ -90,7 +98,7 @@ def main():
     print("=" * 72)
 
     # ── Save CSV ─────────────────────────────────────────────────
-    out_csv = os.path.join(BASE_DIR, "mmpbsa_ddg_summary.csv")
+    out_csv = os.path.join(BASE_DIR, "03_mmpbsa_ddg_summary.csv")
     with open(out_csv, "w") as f:
         f.write("Mutation,Position,DeltaG_mut,Std_mut,DeltaDeltaG,Error\n")
         for mut_name, pos, ddg, ddg_err, mut_mean, mut_std in results:

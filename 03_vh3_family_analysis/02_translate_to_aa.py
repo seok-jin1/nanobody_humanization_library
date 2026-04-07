@@ -1,10 +1,17 @@
 #!/usr/bin/env python3
 """
-VH3_alleles_summary.csv 의 DNA sequence 컬럼을 아미노산 서열로 번역하여
-aa_sequence 컬럼을 추가(또는 갱신)한다.
+DNA 서열을 아미노산 서열로 번역
 
-표준 유전암호(standard genetic code)를 사용하며,
-인식 불가 코돈은 'X', 정지 코돈은 '*' 로 표기한다.
+Translates DNA sequences to amino acids using standard genetic code.
+Unrecognized codons are marked as 'X', stop codons as '*'.
+
+Input:
+    - VH3_alleles_summary.csv : 01_fetch_vh3_alleles.py 에서 생성된 allele 요약 CSV
+Output:
+    - VH3_alleles_summary.csv : aa_sequence 컬럼이 추가(또는 갱신)된 동일 파일 (in-place)
+
+Usage:
+    python 02_translate_to_aa.py
 """
 
 import csv

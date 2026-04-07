@@ -1,11 +1,28 @@
+#!/usr/bin/env python3
+"""
+숫자 IMGT 포지션 기반으로 나노바디 잔기 다양성(엔트로피) 및 아미노산 물성 비율을 시각화한다.
+
+Visualize nanobody residue variability by numeric IMGT position (1-128):
+upper panel shows Shannon entropy per position with CDR highlights,
+lower panel shows stacked amino-acid property ratios.
+
+Input:
+    - 01_imgt_residue_matrix.csv : residue frequency ratio matrix
+Output:
+    - figures/04_imgt_numeric_only_analysis.png : entropy + property ratio plot
+
+Usage:
+    python 04_visualize_numeric_only.py
+"""
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
 # --- 설정 ---
-INPUT_CSV = 'imgt_residue_matrix.csv'
-OUTPUT_PLOT = 'imgt_numeric_only_analysis.png'
+INPUT_CSV = '01_imgt_residue_matrix.csv'
+OUTPUT_PLOT = 'figures/04_imgt_numeric_only_analysis.png'
 
 PROPERTIES = {
     'Hydrophobic': ['A', 'V', 'I', 'L', 'M', 'F', 'W', 'P'],

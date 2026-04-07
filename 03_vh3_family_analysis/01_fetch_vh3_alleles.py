@@ -1,7 +1,18 @@
 #!/usr/bin/env python3
 """
-Fetch human VH3 family (IGHV3-*) germline allele sequences from OGRDB REST API.
-Saves gapped FASTA, ungapped FASTA, and summary CSV to the same directory.
+OGRDB REST API에서 human VH3 family germline allele 서열 다운로드
+
+Fetches IGHV3-* alleles from OGRDB, saves gapped/ungapped FASTA + CSV.
+
+Input:
+    - (none) : API에서 직접 다운로드
+Output:
+    - VH3_alleles_gapped.fasta   : gap 포함 FASTA
+    - VH3_alleles_ungapped.fasta : gap 제거 FASTA
+    - VH3_alleles_summary.csv    : allele 요약 CSV (allele, gapped_length, ungapped_length, sequence)
+
+Usage:
+    python 01_fetch_vh3_alleles.py
 """
 
 import csv

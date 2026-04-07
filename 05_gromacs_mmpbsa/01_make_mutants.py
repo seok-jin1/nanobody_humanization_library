@@ -1,10 +1,20 @@
 #!/usr/bin/env python3
 """
-Generate 13 mutant PDB files from WT nanobody using pdbfixer.
+13개 humanization 돌연변이체 PDB 파일 생성
+
+Generates 13 mutant PDB files from WT nanobody using pdbfixer/OpenMM.
 Each mutant gets its own directory under mutants/.
 
+Input:
+    - ../01_structure_prediction/nanobody_af3.pdb : WT nanobody structure
+Output:
+    - mutants/<MUT_NAME>/nanobody_<MUT_NAME>.pdb : 13 mutant PDB files
+
 Usage:
-    conda run -n docking-md python3 make_mutants.py
+    python 01_make_mutants.py
+
+Dependencies:
+    pdbfixer, OpenMM
 """
 
 import os
@@ -12,7 +22,7 @@ from pdbfixer import PDBFixer
 from openmm.app import PDBFile
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-WT_PDB = os.path.join(BASE_DIR, "nanobody_af3.pdb")
+WT_PDB = os.path.join(BASE_DIR, "..", "01_structure_prediction", "nanobody_af3.pdb")
 MUTANTS_DIR = os.path.join(BASE_DIR, "mutants")
 
 # 13 humanization mutations

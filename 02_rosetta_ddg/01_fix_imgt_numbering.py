@@ -1,7 +1,22 @@
 #!/usr/bin/env python3
 """
-Properly map IMGT numbering to sequential numbering for the nanobody.
-Uses ANARCI-like logic for VHH domain.
+IMGT 번호 체계를 PDB 순차 번호로 변환하여 Rosetta 돌연변이 파일 생성
+
+Maps 13 humanization mutations from IMGT numbering to sequential PDB
+positions for the anti-FAP nanobody (CN106928368B, 125 aa). Verifies
+each mutation by checking the expected wild-type residue at the mapped
+position in the nanobody sequence, then writes the corrected mutations
+in Rosetta-compatible format.
+
+Input:
+    - (hardcoded) nanobody sequence: 125-residue anti-FAP VHH
+    - (hardcoded) 13 IMGT-numbered humanization mutations
+Output:
+    - 01_mutations_corrected.txt : Rosetta mutation format file
+      (each line: WT_residue position MUT_residue)
+
+Usage:
+    python 01_fix_imgt_numbering.py
 """
 
 target_seq = "QVQLQESGGGSVQAGGSLRLSCAASGYTVRSSYMGWFRQVPGKQREAVAIITSGGTTYYADSVKGRFTISRDNAKNTLYLQMNSLKPEDTAMYYCAGRTGFIGGIWFRDRDYDYWGQGTQVTVSS"
@@ -195,7 +210,7 @@ print(f"VERIFIED: {len(verified_mutations)} / {len(mutations)} mutations")
 print("="*80)
 
 # Write corrected mutations file
-with open('mutations_corrected.txt', 'w') as f:
+with open('01_mutations_corrected.txt', 'w') as f:
     f.write(f"total {len(verified_mutations) + 1}\n")
 
     for wt, pos, mut in verified_mutations:
@@ -205,5 +220,5 @@ with open('mutations_corrected.txt', 'w') as f:
     f.write("1\n")
     f.write("WT WT WT\n")
 
-print("\n✓ Created: mutations_corrected.txt")
+print("\n✓ Created: 01_mutations_corrected.txt")
 print(f"  Contains {len(verified_mutations)} mutations + WT reference")

@@ -1,11 +1,18 @@
 #!/usr/bin/env python3
 """
-VH3_alleles_summary.csv 에서 unique 아미노산 서열을 추출하고
-ANARCI 를 통해 IMGT numbering 을 적용한다.
+ANARCI를 이용한 IMGT 넘버링 적용
 
-출력:
-  VH3_unique_imgt.csv     — unique 서열별 IMGT position 컬럼 CSV
-  VH3_unique.fasta        — unique 서열 FASTA
+Applies IMGT numbering to unique VH3 sequences via ANARCI.
+Extracts unique amino acid sequences and assigns IMGT position labels.
+
+Input:
+    - VH3_alleles_summary.csv : aa_sequence 컬럼이 포함된 allele 요약 CSV (02_translate_to_aa.py 출력)
+Output:
+    - VH3_unique_imgt.csv  : unique 서열별 IMGT position 컬럼 CSV
+    - VH3_unique.fasta     : unique 서열 FASTA
+
+Usage:
+    python 03_imgt_numbering.py
 """
 
 import csv

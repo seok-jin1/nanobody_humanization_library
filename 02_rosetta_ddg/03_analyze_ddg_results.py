@@ -1,6 +1,22 @@
 #!/usr/bin/env python3
 """
-Analyze Cartesian ddG results and identify high-risk mutations.
+ddG 결과를 분석하여 돌연변이 안정성 영향을 분류하고 권장사항 제시
+
+Classifies each humanization mutation by its stability impact
+(strongly destabilizing / moderately destabilizing / mildly destabilizing /
+neutral / stabilizing) based on Cartesian ddG values, prints a detailed
+console report with IMGT mapping and recommendations, and saves the
+analysis summary.
+
+Input:
+    - <ddg_predictions_file> : standardized ddG predictions file
+      (e.g., 02_ddg_predictions.out) provided as CLI argument
+Output:
+    - console : detailed stability analysis report
+    - 03_ddg_analysis_report.txt : saved analysis summary
+
+Usage:
+    python 03_analyze_ddg_results.py 02_ddg_predictions.out
 """
 
 import re
@@ -47,7 +63,7 @@ def classify_mutation(ddg, std):
 
 def main():
     if len(sys.argv) < 2:
-        print("Usage: python analyze_ddg_results.py <ddg_predictions.out>")
+        print("Usage: python 03_analyze_ddg_results.py <02_ddg_predictions.out>")
         sys.exit(1)
 
     ddg_file = sys.argv[1]
@@ -196,7 +212,7 @@ def main():
 
     print()
     print("="*80)
-    print("Analysis complete. Results saved to: ddg_analysis_report.txt")
+    print("Analysis complete. Results saved to: 03_ddg_analysis_report.txt")
     print("="*80)
 
 if __name__ == "__main__":

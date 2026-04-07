@@ -1,14 +1,29 @@
 #!/usr/bin/env python3
 """
-Compare AlphaFold3 predicted structures with 1ZVH template-based model.
-Calculate RMSD for backbone atoms (CA) and all heavy atoms.
+AlphaFold3 예측 구조와 템플릿 기반 모델을 비교하고 분석 스크립트 생성
+
+Compares AlphaFold3-predicted nanobody structures against the 1ZVH
+template-based model. Reads AF3 confidence scores (pLDDT, pTM),
+generates a Rosetta RosettaScripts XML for RMSD calculation and a
+PyMOL shell script for visual structural overlay.
+
+Input:
+    - ../01_structure_prediction/fold_anti_fap_nb_model_*.cif : AF3 CIF files
+    - ../01_structure_prediction/fold_anti_fap_nb_summary_confidences_*.json : AF3 confidence scores
+    - relaxed/threaded_template_1ZVH_chainL_0001_0005.pdb : template PDB
+Output:
+    - 04_rmsd_calc.xml : RosettaScripts XML for RMSD filter
+    - 04_compare_pymol.sh : PyMOL comparison shell script
+
+Usage:
+    python 04_compare_structures.py
 """
 
 import subprocess
 import os
 
 # Paths
-af3_dir = "/home/laugh/rosetta/alphafold3_prediction_FAP_Nb"
+af3_dir = "../01_structure_prediction"
 template_model = "relaxed/threaded_template_1ZVH_chainL_0001_0005.pdb"
 
 print("="*80)
@@ -79,10 +94,10 @@ rmsd_xml = """
 </ROSETTASCRIPTS>
 """
 
-with open('rmsd_calc.xml', 'w') as f:
+with open('04_rmsd_calc.xml', 'w') as f:
     f.write(rmsd_xml)
 
-print("✓ Created rmsd_calc.xml")
+print("✓ Created 04_rmsd_calc.xml")
 print()
 
 # For now, let's just note what needs to be done
@@ -126,7 +141,7 @@ echo "Comparing AlphaFold3 models with template-based model..."
 echo ""
 
 # Copy AF3 models to working directory
-cp /home/laugh/rosetta/alphafold3_prediction_FAP_Nb/fold_anti_fap_nb_model_*.cif .
+cp ../01_structure_prediction/fold_anti_fap_nb_model_*.cif .
 
 # Launch PyMOL for visual comparison
 echo "Launching PyMOL for visual comparison..."
@@ -142,11 +157,11 @@ echo ""
 echo "This will show the structural overlay and RMSD."
 """
 
-with open('compare_pymol.sh', 'w') as f:
+with open('04_compare_pymol.sh', 'w') as f:
     f.write(comparison_script)
 
-os.chmod('compare_pymol.sh', 0o755)
-print("✓ Created compare_pymol.sh")
+os.chmod('04_compare_pymol.sh', 0o755)
+print("✓ Created 04_compare_pymol.sh")
 print()
 
 print("="*80)
@@ -187,5 +202,5 @@ print("""
 """)
 
 print()
-print("Run './compare_pymol.sh' for visual comparison")
+print("Run './04_compare_pymol.sh' for visual comparison")
 print("="*80)

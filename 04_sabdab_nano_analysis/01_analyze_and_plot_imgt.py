@@ -1,3 +1,22 @@
+#!/usr/bin/env python3
+"""
+SAbDab 나노바디 PDB 파일로부터 IMGT 넘버링 기반 잔기 빈도 매트릭스를 생성하고 히트맵을 시각화한다.
+
+Parse IMGT-numbered nanobody PDB structures from SAbDab, build an amino-acid
+frequency matrix (positions x residues), and render a heatmap of the V-domain
+(positions 1-128).
+
+Input:
+    - sabdab_nano_summary_all.tsv : SAbDab nanobody summary with PDB/chain mapping
+    - imgt/*.pdb                  : IMGT-renumbered PDB structure files
+Output:
+    - 01_imgt_residue_matrix.csv         : residue frequency ratio matrix (CSV)
+    - figures/01_imgt_residue_heatmap.png : V-domain residue distribution heatmap
+
+Usage:
+    python 01_analyze_and_plot_imgt.py
+"""
+
 import os
 import glob
 import pandas as pd
@@ -8,8 +27,8 @@ import seaborn as sns
 # --- 설정 ---
 SUMMARY_FILE = 'sabdab_nano_summary_all.tsv'
 IMGT_DIR = 'imgt'
-OUTPUT_CSV = 'imgt_residue_matrix.csv'
-OUTPUT_PLOT = 'imgt_residue_heatmap.png'
+OUTPUT_CSV = '01_imgt_residue_matrix.csv'
+OUTPUT_PLOT = 'figures/01_imgt_residue_heatmap.png'
 
 # 3-letter to 1-letter mapping
 AA_MAP = {

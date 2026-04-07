@@ -1,3 +1,22 @@
+#!/usr/bin/env python3
+"""
+SAbDab 나노바디 구조에서 CDR1/CDR2/CDR3 길이 분포를 계산하고 시각화한다.
+
+Calculate CDR length distributions (CDR1, CDR2, CDR3) from IMGT-numbered
+nanobody PDB structures and generate a bar-chart visualization with
+descriptive statistics.
+
+Input:
+    - sabdab_nano_summary_all.tsv : SAbDab nanobody summary with PDB/chain mapping
+    - imgt/*.pdb                  : IMGT-renumbered PDB structure files
+Output:
+    - 05_cdr_length_distribution.csv        : per-nanobody CDR lengths and sequences
+    - figures/05_cdr_length_distribution.png : CDR length distribution bar charts
+
+Usage:
+    python 05_analyze_cdr3_length.py
+"""
+
 import os
 import glob
 import pandas as pd
@@ -6,8 +25,8 @@ import matplotlib.pyplot as plt
 # --- 설정 ---
 SUMMARY_FILE = 'sabdab_nano_summary_all.tsv'
 IMGT_DIR = 'imgt'
-OUTPUT_CSV = 'cdr_length_distribution.csv'
-OUTPUT_PLOT = 'cdr_length_distribution.png'
+OUTPUT_CSV = '05_cdr_length_distribution.csv'
+OUTPUT_PLOT = 'figures/05_cdr_length_distribution.png'
 
 # IMGT CDR 범위 정의
 CDR_REGIONS = {

@@ -1,7 +1,20 @@
 #!/usr/bin/env python3
 """
-Calculate RMSD between AlphaFold3 model and template-based model.
-Uses simple coordinate extraction and RMSD calculation.
+AlphaFold3 모델과 템플릿 모델 간 Kabsch 정렬 RMSD 계산
+
+Calculates the C-alpha RMSD between an AlphaFold3-predicted nanobody
+structure (mmCIF) and the 1ZVH template-based model (PDB) using the
+Kabsch algorithm for optimal superposition. Reports per-residue
+deviations to identify regions of structural divergence.
+
+Input:
+    - ../01_structure_prediction/fold_anti_fap_nb_model_0.cif : AF3 model (mmCIF)
+    - relaxed/threaded_template_1ZVH_chainL_0001_0005.pdb : template model (PDB)
+Output:
+    - console : RMSD value, per-residue deviations, reliability assessment
+
+Usage:
+    python 05_calc_rmsd.py
 """
 
 import numpy as np
@@ -92,7 +105,7 @@ def main():
     print("="*80)
     print()
 
-    af3_file = "fold_anti_fap_nb_model_0.cif"
+    af3_file = "../01_structure_prediction/fold_anti_fap_nb_model_0.cif"
     template_file = "relaxed/threaded_template_1ZVH_chainL_0001_0005.pdb"
 
     print(f"AlphaFold3 model: {af3_file}")

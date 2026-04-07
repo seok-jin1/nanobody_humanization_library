@@ -1,8 +1,24 @@
+#!/usr/bin/env python3
+"""
+IMGT 잔기 매트릭스에서 원본 포지션 이름을 유지한 채 빈도 20% 이상 잔기를 요약한다.
+
+Summarize the IMGT residue frequency matrix by listing residues with >= 20%
+frequency at each position, keeping the original (non-numeric) position labels.
+
+Input:
+    - 01_imgt_residue_matrix.csv : residue frequency ratio matrix
+Output:
+    - 02_imgt_original_summary_top20.csv : per-position top residues (>= 20%)
+
+Usage:
+    python 02_create_original_summary.py
+"""
+
 import pandas as pd
 
 # --- 설정 ---
-INPUT_CSV = 'imgt_residue_matrix.csv'
-OUTPUT_SUMMARY_CSV = 'imgt_original_summary_top20.csv'
+INPUT_CSV = '01_imgt_residue_matrix.csv'
+OUTPUT_SUMMARY_CSV = '02_imgt_original_summary_top20.csv'
 
 def main():
     # 1. 데이터 로드

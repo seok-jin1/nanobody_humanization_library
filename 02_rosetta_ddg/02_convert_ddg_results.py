@@ -1,6 +1,20 @@
 #!/usr/bin/env python3
 """
-Convert legacy cartesian_ddg .ddg file to ddG predictions format.
+Rosetta cartesian_ddg 원시 결과(.ddg)를 표준 ddG 예측 형식으로 변환
+
+Parses the raw energy output from Rosetta's cartesian_ddg protocol,
+calculates mean ddG values relative to the wild-type baseline with
+propagated standard deviations, and writes standardized predictions.
+
+Input:
+    - <ddg_file> : Rosetta .ddg output file (e.g., mutations_final.ddg,
+      mutations_set2.ddg) provided as CLI argument
+Output:
+    - 02_ddg_predictions.out : standardized ddG predictions
+      (format: ddG: mutation_name mean_ddG std_dev)
+
+Usage:
+    python 02_convert_ddg_results.py mutations_final.ddg
 """
 
 import sys
@@ -66,7 +80,7 @@ def calculate_ddg(energies):
 
 def main():
     if len(sys.argv) < 2:
-        print("Usage: python convert_ddg_results.py mutations_final.ddg")
+        print("Usage: python 02_convert_ddg_results.py mutations_final.ddg")
         sys.exit(1)
     
     ddg_file = sys.argv[1]
@@ -78,7 +92,7 @@ def main():
     results = calculate_ddg(energies)
     
     # Output in expected format
-    output_file = "ddg_predictions.out"
+    output_file = "02_ddg_predictions.out"
     with open(output_file, 'w') as f:
         # Header
         f.write("ddG: description total std\n")

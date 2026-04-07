@@ -1,9 +1,26 @@
+#!/usr/bin/env python3
+"""
+IMGT 잔기 매트릭스를 숫자 포지션으로 그룹화하고 빈도 20% 이상 잔기를 요약한다.
+
+Group IMGT positions by their numeric part (collapsing insertion codes),
+compute mean frequencies, and list residues with >= 20% frequency for
+positions 1-128.
+
+Input:
+    - 01_imgt_residue_matrix.csv : residue frequency ratio matrix
+Output:
+    - 03_imgt_numeric_summary_top20.csv : numeric-position top residues (>= 20%)
+
+Usage:
+    python 03_create_numeric_summary.py
+"""
+
 import pandas as pd
 import numpy as np
 
 # --- 설정 ---
-INPUT_CSV = 'imgt_residue_matrix.csv'
-OUTPUT_SUMMARY_CSV = 'imgt_numeric_summary_top20.csv'
+INPUT_CSV = '01_imgt_residue_matrix.csv'
+OUTPUT_SUMMARY_CSV = '03_imgt_numeric_summary_top20.csv'
 
 def get_num(pos):
     """문자열 포지션에서 숫자만 추출"""

@@ -1,10 +1,18 @@
 #!/usr/bin/env python3
 """
-IMGT position별 아미노산 서열 proportion 계산.
+IMGT position별 아미노산 빈도 계산
 
-출력:
-  VH3_imgt_aa_proportion.csv  — wide format (rows=position, cols=amino acid)
-  VH3_imgt_aa_proportion_long.csv — long format (position, aa, count, proportion)
+Calculates amino acid proportions at each IMGT position.
+Gaps ('-') are excluded from proportion calculations.
+
+Input:
+    - VH3_unique_imgt.csv : IMGT 넘버링이 적용된 unique 서열 CSV (03_imgt_numbering.py 출력)
+Output:
+    - VH3_imgt_aa_proportion.csv      : wide format (rows=position, cols=amino acid)
+    - VH3_imgt_aa_proportion_long.csv : long format (position, amino_acid, count, proportion)
+
+Usage:
+    python 04_aa_proportion.py
 """
 
 import csv
