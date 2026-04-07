@@ -9,7 +9,7 @@ the rationale for accepting or rejecting each humanization mutation.
 Input:
     - 02_ddg_predictions_final.out : Set1 ddG predictions (13 mutations)
     - 02_ddg_predictions_set2.out  : Set2 ddG predictions (I55/P96 saturation)
-    - ../03_vh3_family_analysis/VH3_imgt_aa_proportion.csv : VH3 AA proportions
+    - ../03_vh3_family_analysis/04_VH3_imgt_aa_proportion.csv : VH3 AA proportions
 Output:
     - 05_humanization_decision.csv : final decision table
     - 05_humanization_decision.txt : formatted text report
@@ -31,7 +31,7 @@ os.makedirs(FIGURES_DIR, exist_ok=True)
 
 SET1_FILE = os.path.join(SCRIPT_DIR, "02_ddg_predictions_final.out")
 SET2_FILE = os.path.join(SCRIPT_DIR, "02_ddg_predictions_set2.out")
-VH3_FILE = os.path.join(SCRIPT_DIR, "..", "03_vh3_family_analysis", "VH3_imgt_aa_proportion.csv")
+VH3_FILE = os.path.join(SCRIPT_DIR, "..", "03_vh3_family_analysis", "04_VH3_imgt_aa_proportion.csv")
 
 # 13 humanization mutations: (IMGT, WT_1letter, MUT_1letter, rosetta_key, region)
 MUTATIONS = [

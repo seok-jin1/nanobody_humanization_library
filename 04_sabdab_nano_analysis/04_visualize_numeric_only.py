@@ -66,7 +66,7 @@ def main():
     
     # 같은 숫자를 가진 컬럼들을 평균(Mean) 내어 하나의 대표 프로파일로 만듦
     # (주의: Sum을 하면 비율이 1을 넘을 수 있으므로 Mean이 적절함)
-    df_numeric = df.groupby(level=0, axis=1).mean()
+    df_numeric = df.T.groupby(level=0).mean().T
     
     # 1-128 범위로 필터링 및 정렬
     numeric_positions = sorted([c for c in df_numeric.columns if 1 <= c <= 128])

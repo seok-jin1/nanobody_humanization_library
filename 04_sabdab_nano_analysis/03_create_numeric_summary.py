@@ -33,7 +33,7 @@ def main():
     
     # 2. 숫자 부분으로 그룹화하여 평균 계산
     df.columns = [get_num(c) for c in df.columns]
-    df_numeric = df.groupby(level=0, axis=1).mean()
+    df_numeric = df.T.groupby(level=0).mean().T
     
     # 1-128 범위 제한
     numeric_positions = sorted([c for c in df_numeric.columns if 1 <= c <= 128])
