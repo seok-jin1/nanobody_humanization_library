@@ -73,7 +73,7 @@ For positions where the initial humanization mutation was destabilizing (I55V: +
 ```bash
 cartesian_ddg.linuxgccrelease \
   -in:file:s ../01_structure_prediction/fold_anti_fap_nb_model_0.cif \
-  -ddg:mut_file 02_mutations_set2.txt \
+  -ddg:mut_file 01_mutations_set2.txt \
   -ddg:iterations 5 \
   -ddg:cartesian \
   -ddg:bbnbrs 1 \
@@ -151,7 +151,7 @@ All input files, output data, and analysis scripts are available in the project 
 | `01_mutations_final.txt` | Set1: 13 humanization mutations (Rosetta input) |
 | `01_imgt_pdb_mapping.csv` | Full IMGT ↔ PDB position mapping (125 residues) |
 | `02_convert_ddg_results.py` | Raw .ddg → standardized predictions |
-| `02_mutations_set2.txt` | Set2: 10 saturation mutations for I55/P96 |
+| `01_mutations_set2.txt` | Set2: 10 saturation mutations for I55/P96 |
 | `02_mutations_final.ddg` | Set1 raw Rosetta energy output |
 | `02_mutations_set2.ddg` | Set2 raw Rosetta energy output |
 | `02_ddg_predictions.out` | Set1 processed predictions |
