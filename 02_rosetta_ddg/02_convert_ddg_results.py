@@ -10,12 +10,13 @@ Input:
     - <ddg_file> : Rosetta .ddg output file provided as CLI argument
       (e.g., 02_mutations_final.ddg, 02_mutations_set2.ddg)
 Output:
-    - 02_ddg_predictions.out : standardized ddG predictions
+    - 02_ddg_predictions_<suffix>.out : standardized ddG predictions
       (format: ddG: mutation_name mean_ddG std_dev)
+      suffix is derived from input filename (e.g., final, set2)
 
 Usage:
-    python 02_convert_ddg_results.py 02_mutations_final.ddg
-    python 02_convert_ddg_results.py 02_mutations_set2.ddg
+    python 02_convert_ddg_results.py 02_mutations_final.ddg  → 02_ddg_predictions_final.out
+    python 02_convert_ddg_results.py 02_mutations_set2.ddg   → 02_ddg_predictions_set2.out
 """
 
 import sys
@@ -85,15 +86,18 @@ def main():
         sys.exit(1)
     
     ddg_file = sys.argv[1]
-    
+
     # Parse raw energies
     energies = parse_ddg_file(ddg_file)
-    
+
     # Calculate ddG values
     results = calculate_ddg(energies)
-    
-    # Output in expected format
-    output_file = "02_ddg_predictions.out"
+
+    # Derive output filename from input: 02_mutations_final.ddg → 02_ddg_predictions_final.out
+    import os
+    base = os.path.splitext(os.path.basename(ddg_file))[0]  # e.g. "02_mutations_final"
+    suffix = base.replace("02_mutations_", "").replace("mutations_", "")  # e.g. "final" or "set2"
+    output_file = f"02_ddg_predictions_{suffix}.out"
     with open(output_file, 'w') as f:
         # Header
         f.write("ddG: description total std\n")
