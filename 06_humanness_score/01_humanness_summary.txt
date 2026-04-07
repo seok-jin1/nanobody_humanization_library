@@ -1,0 +1,26 @@
+Nanobody Humanness Score Summary
+==================================================
+
+WT sequence:        QVQLQESGGGSVQAGGSLRLSCAASGYTVRSSYMGWFRQVPGKQREAVAIITSGGTTYYADSVKGRFTISRDNAKNTLYLQMNSLKPEDTAMYYCAGRTGFIGGIWFRDRDYDYWGQGTQVTVSS
+Humanized sequence: QVQLVESGGGLVQAGGSLRLSCAASGYTVRSSYMSWFRQVPGKQREAVALITSGGTTYYADSVKGRFTISRDNSKNTLYLQMNSLRPEDTAVYYCAGRTGFIGGIWFRDRDYDYWGQGTLVTVSS
+Mutations applied:  8 / 91 FR positions
+
+1. FR Identity to IGHV3-66*01
+   WT:        80.0% (64/80)
+   Humanized: 87.5% (70/80)
+   Change:    +7.5%
+
+2. Position-Weighted Humanness (VH3 family mean proportion)
+   WT:        0.6680
+   Humanized: 0.7093
+   Change:    +0.0413
+
+Accepted mutations:
+  IMGT   5 (FR1): Q→V  VH3 prop: 0.000→0.970  germline(V): match
+  IMGT  12 (FR1): S→L  VH3 prop: 0.000→0.776  germline(L): match
+  IMGT  40 (FR2): G→S  VH3 prop: 0.000→0.313  germline(S): match
+  IMGT  55 (FR2): I→L  VH3 prop: 0.000→0.060  germline(V): no match
+  IMGT  83 (FR3): A→S  VH3 prop: 0.403→0.597  germline(S): match
+  IMGT  95 (FR3): K→R  VH3 prop: 0.149→0.821  germline(R): match
+  IMGT 101 (FR3): M→V  VH3 prop: 0.000→0.776  germline(V): match
+  IMGT 123 (FR4): Q→L  VH3 prop: 0.000→0.000  germline(): no match

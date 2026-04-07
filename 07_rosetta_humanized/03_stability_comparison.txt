@@ -1,0 +1,12 @@
+WT vs Humanized Stability Comparison
+==================================================
+
+1. Multi-Mutant Cartesian ddG (8 simultaneous mutations)
+   ddG = -7.710 ± 0.198 REU
+   → Stabilizing (humanization improves stability)
+
+2. FastRelax Total Score Comparison
+   WT:        -438.05 ± 3.34 REU (n=5)
+   Humanized: -449.57 ± nan REU (n=1)
+   Difference: -11.52 REU
+   → Humanized more stable

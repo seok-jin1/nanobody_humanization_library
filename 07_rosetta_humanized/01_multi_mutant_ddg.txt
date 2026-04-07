@@ -1,0 +1,10 @@
+total 1
+8
+Q 5 V
+S 11 L
+G 35 S
+I 50 L
+A 74 S
+K 86 R
+M 92 V
+Q 120 L

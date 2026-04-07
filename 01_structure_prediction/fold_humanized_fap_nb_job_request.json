@@ -1,0 +1,18 @@
+[{
+ "name": "humanized_FAP_Nb",
+ "modelSeeds": [
+  "706241917"
+ ],
+ "sequences": [
+  {
+   "proteinChain": {
+    "sequence": "QVQLVESGGGLVQAGGSLRLSCAASGYTVRSSYMSWFRQVPGKQREAVALITSGGTTYYADSVKGRFTISRDNSKNTLYLQMNSLRPEDTAVYYCAGRTGFIGGIWFRDRDYDYWGQGTLVTVSS",
+    "count": 1,
+    "useStructureTemplate": true
+   }
+  }
+ ],
+ "dialect": "alphafoldserver",
+ "version": 2
+}
+]
