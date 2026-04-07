@@ -27,10 +27,10 @@ Three-dimensional structure prediction was performed using AlphaFold3 (Jumper et
 ### 3. Mutation Mapping and Preparation
 
 #### 3.1 IMGT to Sequential Numbering Conversion
-Framework mutations were initially identified using IMGT numbering, which includes gaps and insertions. A custom Python script (`fix_imgt_numbering.py`) was developed to map IMGT positions to sequential PDB residue numbers based on direct sequence alignment, framework region-specific offsets (FR1: ~0, FR2: ~3, FR3: ~9, FR4: ~0), and manual verification of each mutation position.
+Framework mutations were initially identified using IMGT numbering, which includes gaps and insertions. A custom Python script (`01_fix_imgt_numbering.py`) was developed to map IMGT positions to sequential PDB residue numbers based on direct sequence alignment, framework region-specific offsets (FR1: ~0, FR2: ~3, FR3: ~9, FR4: ~0), and manual verification of each mutation position.
 
 #### 3.2 Mutation List Preparation
-The final mutation list (`mutations_final.txt`) was formatted for Rosetta input:
+The final mutation list (`01_mutations_final.txt`) was formatted for Rosetta input:
 ```
 total 13
 1
@@ -54,17 +54,18 @@ Cartesian ddG calculations were performed using the following protocol:
 
 ```bash
 cartesian_ddg.linuxgccrelease \
-  -in:file:s fold_anti_fap_nb_model_0.cif \
-  -ddg:mut_file mutations_final.txt \
+  -in:file:s ../01_structure_prediction/fold_anti_fap_nb_model_0.cif \
+  -ddg:mut_file 01_mutations_final.txt \
   -ddg:iterations 5 \
   -ddg:cartesian \
   -ddg:bbnbrs 1 \
   -ddg:dump_pdbs false \
-  -out:path:all ddg_output_af3/ \
   -score:weights ref2015_cart \
   -fa_max_dis 9.0 \
   -ddg:legacy true
 ```
+
+This produces `02_mutations_final.ddg` (raw energy output).
 
 Key parameters included the ref2015_cart score function (a Cartesian-space energy function optimized for high-resolution refinement), 5 independent iterations per mutation for statistical confidence, backbone flexibility of ±1 residue from the mutation site (bbnbrs 1), a repacking radius of 9 Å (fa_max_dis 9.0) for sidechain repacking, Cartesian coordinate space (more accurate than torsion space), and legacy mode for compatible output format with downstream analysis tools.
 
@@ -123,7 +124,21 @@ Mutations with standard deviation > 1.0 REU were flagged as having lower confide
 
 ### 7. Data Availability
 
-All input files, output data, and analysis scripts are available in the project directory, including the structure file (`fold_anti_fap_nb_model_0.cif`), mutation list (`mutations_final.txt`), raw ddG data (`mutations_final.ddg`), processed results (`ddg_predictions.out`), analysis script (`analyze_ddg_results.py`), conversion script (`convert_ddg_results.py`), and final report (`final_summary.md`).
+All input files, output data, and analysis scripts are available in the project directory:
+
+| File | Description |
+|------|-------------|
+| `01_fix_imgt_numbering.py` | IMGT → sequential position mapping |
+| `01_mutations_final.txt` | 13 humanization mutations (Rosetta input) |
+| `mutations_set2.txt` | 10 saturation mutations for I55/P96 |
+| `02_convert_ddg_results.py` | Raw .ddg → standardized predictions |
+| `02_mutations_final.ddg` | Set1 raw Rosetta energy output |
+| `02_mutations_set2.ddg` | Set2 raw Rosetta energy output |
+| `02_ddg_predictions_set2.out` | Set2 processed predictions |
+| `03_analyze_ddg_results.py` | Stability classification script |
+| `03_ddg_analysis_report.txt` | Classification results |
+| `04_compare_structures.py` | AF3 vs template comparison |
+| `05_calc_rmsd.py` | Kabsch RMSD calculation |
 
 ---
 
@@ -216,6 +231,4 @@ Computational analysis successfully identified 6 high-risk mutations out of 13 f
 
 Project: Nanobody Humanization Stability Analysis
 Date: February 10, 2026
-Location: `/home/laugh/rosetta/nanobody_humanization/`
-
-For questions regarding methodology or data analysis, please refer to the detailed documentation in this directory.
+Repository: [nanobody_humanization_library](https://github.com/seok-jin1/nanobody_humanization_library)
