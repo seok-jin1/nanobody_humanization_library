@@ -10,13 +10,15 @@ analysis summary.
 
 Input:
     - <ddg_predictions_file> : standardized ddG predictions file
-      (e.g., 02_ddg_predictions.out) provided as CLI argument
+      (e.g., 02_ddg_predictions_final.out) provided as CLI argument
 Output:
     - console : detailed stability analysis report
-    - 03_ddg_analysis_report.txt : saved analysis summary
+    - 03_ddg_analysis_report_<suffix>.txt : saved analysis summary
+      suffix is derived from input filename (e.g., final, set2)
 
 Usage:
-    python 03_analyze_ddg_results.py 02_ddg_predictions.out
+    python 03_analyze_ddg_results.py 02_ddg_predictions_final.out  → 03_ddg_analysis_report_final.txt
+    python 03_analyze_ddg_results.py 02_ddg_predictions_set2.out   → 03_ddg_analysis_report_set2.txt
 """
 
 import re
@@ -80,6 +82,7 @@ def main():
 
     # IMGT mapping for reference (key = MUT_<seqpos><3-letter AA> from Rosetta output)
     imgt_mapping = {
+        # Set1: 13 humanization mutations
         'MUT_1GLU':   (1,   'FR1'),  # Q1E
         'MUT_5VAL':   (5,   'FR1'),  # Q5V
         'MUT_11LEU':  (12,  'FR1'),  # S12L
@@ -93,6 +96,18 @@ def main():
         'MUT_87ALA':  (96,  'FR3'),  # P96A
         'MUT_92VAL':  (101, 'FR3'),  # M101V
         'MUT_120LEU': (123, 'FR4'),  # Q123L
+        # Set2: I55 saturation (seq pos 50)
+        'MUT_50GLY':  (55,  'FR2'),  # I55G
+        'MUT_50ALA':  (55,  'FR2'),  # I55A
+        'MUT_50SER':  (55,  'FR2'),  # I55S
+        'MUT_50TYR':  (55,  'FR2'),  # I55Y
+        'MUT_50ARG':  (55,  'FR2'),  # I55R
+        'MUT_50PHE':  (55,  'FR2'),  # I55F
+        'MUT_50LEU':  (55,  'FR2'),  # I55L
+        'MUT_50GLN':  (55,  'FR2'),  # I55Q
+        # Set2: P96 saturation (seq pos 87)
+        'MUT_87VAL':  (96,  'FR3'),  # P96V
+        'MUT_87ASP':  (96,  'FR3'),  # P96D
     }
 
     print("="*80)
@@ -238,7 +253,11 @@ def main():
                 confidence = "HIGH" if data['std'] < 0.5 else "MED" if data['std'] < 1.0 else "LOW"
                 print(f"  {mut_name:12s} | {imgt_info:15s} | ddG = {data['ddG']:6.2f} ± {data['std']:5.2f} REU | {confidence}")
 
-    report_file = "03_ddg_analysis_report.txt"
+    # Derive report filename from input: 02_ddg_predictions_final.out → 03_ddg_analysis_report_final.txt
+    import os
+    base = os.path.splitext(os.path.basename(ddg_file))[0]  # e.g. "02_ddg_predictions_final"
+    suffix = base.replace("02_ddg_predictions_", "")  # e.g. "final" or "set2"
+    report_file = f"03_ddg_analysis_report_{suffix}.txt"
     with open(report_file, 'w') as f:
         f.write(buf.getvalue())
 

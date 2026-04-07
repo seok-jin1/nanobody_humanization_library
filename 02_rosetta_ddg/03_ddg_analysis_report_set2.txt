@@ -1,0 +1,25 @@
+================================================================================
+NANOBODY HUMANIZATION - CARTESIAN ddG ANALYSIS
+================================================================================
+
+Total mutations analyzed: 10
+
+
+❌ STRONGLY DESTABILIZING
+--------------------------------------------------------------------------------
+  MUT_50GLY    | IMGT  55 | FR2  | ddG =  10.89 ±  1.61 REU | LOW
+  MUT_50SER    | IMGT  55 | FR2  | ddG =  10.32 ±  1.10 REU | LOW
+  MUT_50ARG    | IMGT  55 | FR2  | ddG =   7.83 ±  1.10 REU | LOW
+  MUT_87ASP    | IMGT  96 | FR3  | ddG =   5.62 ±  1.09 REU | LOW
+  MUT_50GLN    | IMGT  55 | FR2  | ddG =   5.12 ±  1.47 REU | LOW
+  MUT_50TYR    | IMGT  55 | FR2  | ddG =   4.67 ±  1.10 REU | LOW
+  MUT_50ALA    | IMGT  55 | FR2  | ddG =   4.10 ±  2.25 REU | LOW
+  MUT_87VAL    | IMGT  96 | FR3  | ddG =   3.68 ±  1.10 REU | LOW
+
+⚡ MILDLY DESTABILIZING
+--------------------------------------------------------------------------------
+  MUT_50PHE    | IMGT  55 | FR2  | ddG =   0.85 ±  1.34 REU | LOW
+
+✓ NEUTRAL
+--------------------------------------------------------------------------------
+  MUT_50LEU    | IMGT  55 | FR2  | ddG =  -0.25 ±  1.09 REU | LOW
