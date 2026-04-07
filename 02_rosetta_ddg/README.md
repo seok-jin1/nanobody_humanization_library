@@ -65,7 +65,26 @@ cartesian_ddg.linuxgccrelease \
   -ddg:legacy true
 ```
 
-This produces `02_mutations_final.ddg` (raw energy output).
+This produces `02_mutations_final.ddg` (raw energy output, 14 × 5 = 70 lines).
+
+#### 4.2.1 Set2: Position Saturation (I55, P96)
+For positions where the initial humanization mutation was destabilizing (I55V: +2.52 REU, P96A: +3.44 REU), alternative amino acids were tested:
+
+```bash
+cartesian_ddg.linuxgccrelease \
+  -in:file:s ../01_structure_prediction/fold_anti_fap_nb_model_0.cif \
+  -ddg:mut_file 02_mutations_set2.txt \
+  -ddg:iterations 5 \
+  -ddg:cartesian \
+  -ddg:bbnbrs 1 \
+  -ddg:dump_pdbs false \
+  -score:weights ref2015_cart \
+  -fa_max_dis 9.0 \
+  -ddg:legacy true
+```
+
+This produces `02_mutations_set2.ddg` (raw energy output, 11 × 5 = 55 lines).
+Set2 mutations: I50→G/A/S/Y/R/F/L/Q (8 variants at IMGT 55) + P87→V/D (2 variants at IMGT 96).
 
 Key parameters included the ref2015_cart score function (a Cartesian-space energy function optimized for high-resolution refinement), 5 independent iterations per mutation for statistical confidence, backbone flexibility of ±1 residue from the mutation site (bbnbrs 1), a repacking radius of 9 Å (fa_max_dis 9.0) for sidechain repacking, Cartesian coordinate space (more accurate than torsion space), and legacy mode for compatible output format with downstream analysis tools.
 
@@ -129,11 +148,13 @@ All input files, output data, and analysis scripts are available in the project 
 | File | Description |
 |------|-------------|
 | `01_fix_imgt_numbering.py` | IMGT → sequential position mapping |
-| `01_mutations_final.txt` | 13 humanization mutations (Rosetta input) |
-| `mutations_set2.txt` | 10 saturation mutations for I55/P96 |
+| `01_mutations_final.txt` | Set1: 13 humanization mutations (Rosetta input) |
+| `01_imgt_pdb_mapping.csv` | Full IMGT ↔ PDB position mapping (125 residues) |
 | `02_convert_ddg_results.py` | Raw .ddg → standardized predictions |
+| `02_mutations_set2.txt` | Set2: 10 saturation mutations for I55/P96 |
 | `02_mutations_final.ddg` | Set1 raw Rosetta energy output |
 | `02_mutations_set2.ddg` | Set2 raw Rosetta energy output |
+| `02_ddg_predictions.out` | Set1 processed predictions |
 | `02_ddg_predictions_set2.out` | Set2 processed predictions |
 | `03_analyze_ddg_results.py` | Stability classification script |
 | `03_ddg_analysis_report.txt` | Classification results |
