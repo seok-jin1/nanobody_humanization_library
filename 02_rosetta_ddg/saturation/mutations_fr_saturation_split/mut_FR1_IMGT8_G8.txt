@@ -1,0 +1,39 @@
+total 19
+1
+G 8 A
+1
+G 8 C
+1
+G 8 D
+1
+G 8 E
+1
+G 8 F
+1
+G 8 H
+1
+G 8 I
+1
+G 8 K
+1
+G 8 L
+1
+G 8 M
+1
+G 8 N
+1
+G 8 P
+1
+G 8 Q
+1
+G 8 R
+1
+G 8 S
+1
+G 8 T
+1
+G 8 V
+1
+G 8 W
+1
+G 8 Y
