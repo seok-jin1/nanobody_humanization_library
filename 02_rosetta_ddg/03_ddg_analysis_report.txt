@@ -2,80 +2,27 @@
 NANOBODY HUMANIZATION - CARTESIAN ddG ANALYSIS
 ================================================================================
 
-SUMMARY STATISTICS
---------------------------------------------------------------------------------
 Total mutations analyzed: 13
 
-  STRONGLY DESTABILIZING        :  6 ( 46.2%)
-  NEUTRAL                       :  2 ( 15.4%)
-  STABILIZING                   :  5 ( 38.5%)
-
-================================================================================
 
 ❌ STRONGLY DESTABILIZING
 --------------------------------------------------------------------------------
-  MUT_14PRO |                 | ddG =   6.04 ±  0.37 REU | HIGH
-  MUT_49SER |                 | ddG =   4.16 ±  1.25 REU | LOW
-  MUT_87ALA |                 | ddG =   3.44 ±  0.91 REU | MED
-  MUT_40ALA |                 | ddG =   2.76 ±  0.17 REU | HIGH
-  MUT_50VAL |                 | ddG =   2.52 ±  0.20 REU | HIGH
-  MUT_1GLU |                 | ddG =   2.09 ±  0.31 REU | HIGH
+  MUT_14PRO    | IMGT  15 | FR1  | ddG =   6.04 ±  0.37 REU | HIGH
+  MUT_49SER    | IMGT  54 | FR2  | ddG =   4.16 ±  1.25 REU | LOW
+  MUT_87ALA    | IMGT  96 | FR3  | ddG =   3.44 ±  0.91 REU | MED
+  MUT_40ALA    | IMGT  45 | FR2  | ddG =   2.76 ±  0.17 REU | HIGH
+  MUT_50VAL    | IMGT  55 | FR2  | ddG =   2.52 ±  0.20 REU | HIGH
+  MUT_1GLU     | IMGT   1 | FR1  | ddG =   2.09 ±  0.31 REU | HIGH
 
 ✓ NEUTRAL
 --------------------------------------------------------------------------------
-  MUT_86ARG |                 | ddG =   0.23 ±  1.80 REU | LOW
-  MUT_5VAL |                 | ddG =  -0.09 ±  0.31 REU | HIGH
+  MUT_86ARG    | IMGT  95 | FR3  | ddG =   0.23 ±  1.80 REU | LOW
+  MUT_5VAL     | IMGT   5 | FR1  | ddG =  -0.09 ±  0.31 REU | HIGH
 
 ✅ STABILIZING
 --------------------------------------------------------------------------------
-  MUT_120LEU |                 | ddG =  -0.59 ±  0.91 REU | MED
-  MUT_35SER |                 | ddG =  -1.38 ±  0.36 REU | HIGH
-  MUT_74SER |                 | ddG =  -2.13 ±  0.23 REU | HIGH
-  MUT_92VAL |                 | ddG =  -2.27 ±  0.83 REU | MED
-  MUT_11LEU |                 | ddG =  -3.54 ±  2.95 REU | LOW
-
-================================================================================
-RECOMMENDATIONS
-================================================================================
-
-🚨 HIGH PRIORITY - Strongly recommend reverting:
-    - MUT_14PRO: ddG = 6.04 REU
-    - MUT_49SER: ddG = 4.16 REU
-    - MUT_87ALA: ddG = 3.44 REU
-    - MUT_40ALA: ddG = 2.76 REU
-    - MUT_50VAL: ddG = 2.52 REU
-    - MUT_1GLU: ddG = 2.09 REU
-
-✅ SAFE TO KEEP:
-    - MUT_86ARG: ddG = 0.23 REU
-    - MUT_5VAL: ddG = -0.09 REU
-    - MUT_120LEU: ddG = -0.59 REU
-    - MUT_35SER: ddG = -1.38 REU
-    - MUT_74SER: ddG = -2.13 REU
-    - MUT_92VAL: ddG = -2.27 REU
-    - MUT_11LEU: ddG = -3.54 REU
-
-================================================================================
-IMPORTANT NOTES
-================================================================================
-
-1. P87A (IMGT 96): Proline removal may show artificially high ddG due to
-   known Cartesian ddG artifacts. Interpret with caution.
-
-2. A14P (IMGT 15): Proline introduction typically restricts backbone.
-   High ddG expected and may be genuine stability concern.
-
-3. G35S (IMGT 40): Loss of glycine flexibility. May impact local structure.
-
-4. Mutations with high standard deviation (>1.0 REU) should be run with
-   more iterations for better confidence.
-
-5. Consider structural context: Surface mutations are more tolerant than
-   buried core mutations.
-    
-WT reference ddG: 0.00 REU
-(Should be close to 0. Large deviation indicates calculation issues)
-
-================================================================================
-Analysis complete. Results saved to: ddg_analysis_report.txt
-================================================================================
+  MUT_120LEU   | IMGT 123 | FR4  | ddG =  -0.59 ±  0.91 REU | MED
+  MUT_35SER    | IMGT  40 | FR2  | ddG =  -1.38 ±  0.36 REU | HIGH
+  MUT_74SER    | IMGT  83 | FR3  | ddG =  -2.13 ±  0.23 REU | HIGH
+  MUT_92VAL    | IMGT 101 | FR3  | ddG =  -2.27 ±  0.83 REU | MED
+  MUT_11LEU    | IMGT  12 | FR1  | ddG =  -3.54 ±  2.95 REU | LOW

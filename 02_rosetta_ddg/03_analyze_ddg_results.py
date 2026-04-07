@@ -78,21 +78,21 @@ def main():
         print("No ddG results found in file")
         sys.exit(1)
 
-    # IMGT mapping for reference
+    # IMGT mapping for reference (key = MUT_<seqpos><3-letter AA> from Rosetta output)
     imgt_mapping = {
-        'Q1E': (1, 'FR1'),
-        'Q5V': (5, 'FR1'),
-        'S7L': (12, 'FR1'),
-        'A14P': (15, 'FR1'),
-        'G35S': (40, 'FR2'),
-        'V40A': (45, 'FR2'),
-        'A49S': (54, 'FR2'),
-        'I50V': (55, 'FR2'),
-        'A74S': (83, 'FR3'),
-        'K86R': (95, 'FR3'),
-        'P87A': (96, 'FR3'),
-        'M92V': (101, 'FR3'),
-        'Q120L': (123, 'FR4'),
+        'MUT_1GLU':   (1,   'FR1'),  # Q1E
+        'MUT_5VAL':   (5,   'FR1'),  # Q5V
+        'MUT_11LEU':  (12,  'FR1'),  # S12L
+        'MUT_14PRO':  (15,  'FR1'),  # A15P
+        'MUT_35SER':  (40,  'FR2'),  # G40S
+        'MUT_40ALA':  (45,  'FR2'),  # V45A
+        'MUT_49SER':  (54,  'FR2'),  # A54S
+        'MUT_50VAL':  (55,  'FR2'),  # I55V
+        'MUT_74SER':  (83,  'FR3'),  # A83S
+        'MUT_86ARG':  (95,  'FR3'),  # K95R
+        'MUT_87ALA':  (96,  'FR3'),  # P96A
+        'MUT_92VAL':  (101, 'FR3'),  # M101V
+        'MUT_120LEU': (123, 'FR4'),  # Q123L
     }
 
     print("="*80)
@@ -210,9 +210,41 @@ def main():
         print(f"WT reference ddG: {wt_ddg:.2f} REU")
         print("(Should be close to 0. Large deviation indicates calculation issues)")
 
+    # Save report to file
+    import io, contextlib
+    buf = io.StringIO()
+    # Re-run the printing to capture output
+    with contextlib.redirect_stdout(buf):
+        print("="*80)
+        print("NANOBODY HUMANIZATION - CARTESIAN ddG ANALYSIS")
+        print("="*80)
+        print(f"\nTotal mutations analyzed: {total_mutations}\n")
+        for category in ["STRONGLY DESTABILIZING", "MODERATELY DESTABILIZING",
+                         "MILDLY DESTABILIZING", "NEUTRAL", "STABILIZING"]:
+            muts = categories[category]
+            if not muts:
+                continue
+            _, symbol = classify_mutation(2.5 if "STRONGLY" in category else
+                                         1.5 if "MODERATELY" in category else
+                                         0.7 if "MILDLY" in category else
+                                         0.0 if "NEUTRAL" in category else -1.0, 0)
+            print(f"\n{symbol} {category}")
+            print("-" * 80)
+            for mut_name, data in muts:
+                imgt_info = ""
+                if mut_name in imgt_mapping:
+                    imgt_pos, region = imgt_mapping[mut_name]
+                    imgt_info = f"IMGT {imgt_pos:3d} | {region:4s}"
+                confidence = "HIGH" if data['std'] < 0.5 else "MED" if data['std'] < 1.0 else "LOW"
+                print(f"  {mut_name:12s} | {imgt_info:15s} | ddG = {data['ddG']:6.2f} ± {data['std']:5.2f} REU | {confidence}")
+
+    report_file = "03_ddg_analysis_report.txt"
+    with open(report_file, 'w') as f:
+        f.write(buf.getvalue())
+
     print()
     print("="*80)
-    print("Analysis complete. Results saved to: 03_ddg_analysis_report.txt")
+    print(f"Analysis complete. Results saved to: {report_file}")
     print("="*80)
 
 if __name__ == "__main__":
