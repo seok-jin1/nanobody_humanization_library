@@ -147,19 +147,30 @@ All input files, output data, and analysis scripts are available in the project 
 
 | File | Description |
 |------|-------------|
-| `01_fix_imgt_numbering.py` | IMGT → sequential position mapping |
+| **Step 1: IMGT → PDB Mapping** | |
+| `01_fix_imgt_numbering.py` | IMGT → sequential position mapping (ANARCI-based) |
 | `01_mutations_final.txt` | Set1: 13 humanization mutations (Rosetta input) |
-| `01_imgt_pdb_mapping.csv` | Full IMGT ↔ PDB position mapping (125 residues) |
-| `02_convert_ddg_results.py` | Raw .ddg → standardized predictions |
 | `01_mutations_set2.txt` | Set2: 10 saturation mutations for I55/P96 |
-| `02_mutations_final.ddg` | Set1 raw Rosetta energy output |
-| `02_mutations_set2.ddg` | Set2 raw Rosetta energy output |
-| `02_ddg_predictions.out` | Set1 processed predictions |
-| `02_ddg_predictions_set2.out` | Set2 processed predictions |
-| `03_analyze_ddg_results.py` | Stability classification script |
-| `03_ddg_analysis_report.txt` | Classification results |
-| `04_compare_structures.py` | AF3 vs template comparison |
-| `05_calc_rmsd.py` | Kabsch RMSD calculation |
+| `01_imgt_pdb_mapping.csv` | Full IMGT ↔ PDB position mapping (125 residues) |
+| **Step 2: Rosetta ddG → Predictions** | |
+| `02_convert_ddg_results.py` | Raw .ddg → standardized predictions |
+| `02_mutations_final.ddg` | Set1 raw Rosetta energy output (70 lines) |
+| `02_mutations_set2.ddg` | Set2 raw Rosetta energy output (55 lines) |
+| `02_ddg_predictions_final.out` | Set1 processed predictions (13 mutations) |
+| `02_ddg_predictions_set2.out` | Set2 processed predictions (10 mutations) |
+| **Step 3: Stability Classification** | |
+| `03_analyze_ddg_results.py` | Mutation stability classification |
+| `03_ddg_analysis_report_final.txt` | Set1 classification results |
+| `03_ddg_analysis_report_set2.txt` | Set2 classification results |
+| **Step 4: Visualization** | |
+| `04_visualize_ddg.py` | ddG bar plots (Set1 + Set2) |
+| `04_ddg_plot_data.csv` | Plot data (CSV) |
+| `figures/04_ddg_barplot.png/pdf` | Bar plots with stability color coding |
+| **Step 5: Final Decision** | |
+| `05_decision_summary.py` | Integrates ddG + VH3 germline proportion |
+| `05_humanization_decision.csv` | Decision table (CSV) |
+| `05_humanization_decision.txt` | Decision report (text) |
+| `figures/05_decision_table.png/pdf` | Decision summary table |
 
 ---
 
@@ -212,14 +223,21 @@ Two proline-related mutations showed opposing effects. A14P (proline introductio
 
 Based on computational predictions:
 
-### Phase 1: Conservative Humanization
-Based on computational predictions, we recommend retaining 7 out of 13 mutations (Q5V, S11L, G35S, A74S, K86R, M92V, Q120L) while reverting 6 mutations identified as high-risk (Q1E, A14P, V40A, A49S, I50V, P87A).
+### Final Humanization Decision (8/13 accepted)
+Based on Set1 ddG analysis, Set2 position saturation, and VH3 germline AA proportion, 8 mutations were accepted:
 
-### Phase 2: Experimental Validation
-The conservative humanization variant should be generated and characterized by measuring expression yield and stability (Tm, aggregation propensity). If necessary, medium-risk mutations can be systematically tested and compared with the full humanization variant containing all 13 mutations.
+| IMGT | Mutation | ΔΔG (REU) | Decision | Rationale |
+|------|----------|-----------|----------|-----------|
+| 5 | Q→V | -0.09 | Accept | Neutral |
+| 12 | S→L | -3.54 | Accept | Stabilizing |
+| 40 | G→S | -1.38 | Accept | Stabilizing |
+| 55 | I→**L** | -0.25 | Accept | Set2 saturation: only I55L has negative ΔΔG |
+| 83 | A→S | -2.13 | Accept | Stabilizing |
+| 95 | K→R | +0.23 | Accept | Neutral (conservative) |
+| 101 | M→V | -2.27 | Accept | Stabilizing |
+| 123 | Q→L | -0.59 | Accept | Stabilizing |
 
-### Phase 3: P87A Verification
-Given potential artifacts in proline calculations, P87A should be evaluated separately through molecular dynamics simulations and experimental mutagenesis studies to confirm the computational predictions.
+5 mutations rejected: Q1E (+2.09, Q 14.9% in VH3), A15P (+6.04), V45A (+2.76), A54S (+4.16, A 11.9% in VH3), P96A/V/D (all destabilizing).
 
 ---
 
