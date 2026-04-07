@@ -2,223 +2,153 @@
 """
 IMGT 번호 체계를 PDB 순차 번호로 변환하여 Rosetta 돌연변이 파일 생성
 
-Maps 13 humanization mutations from IMGT numbering to sequential PDB
-positions for the anti-FAP nanobody (CN106928368B, 125 aa). Verifies
-each mutation by checking the expected wild-type residue at the mapped
-position in the nanobody sequence, then writes the corrected mutations
-in Rosetta-compatible format.
+Uses ANARCI to apply IMGT numbering to the nanobody sequence, then maps
+each IMGT-numbered humanization mutation to the corresponding sequential
+PDB position. Verifies wild-type residue identity at each mapped position.
 
 Input:
-    - (hardcoded) nanobody sequence: 125-residue anti-FAP VHH
+    - (hardcoded) nanobody sequence: 125-residue anti-FAP VHH (CN106928368B)
     - (hardcoded) 13 IMGT-numbered humanization mutations
 Output:
-    - 01_mutations_corrected.txt : Rosetta mutation format file
+    - 01_mutations_final.txt : Rosetta mutation format file
       (each line: WT_residue position MUT_residue)
 
 Usage:
     python 01_fix_imgt_numbering.py
+
+Dependencies:
+    anarci
 """
 
-target_seq = "QVQLQESGGGSVQAGGSLRLSCAASGYTVRSSYMGWFRQVPGKQREAVAIITSGGTTYYADSVKGRFTISRDNAKNTLYLQMNSLKPEDTAMYYCAGRTGFIGGIWFRDRDYDYWGQGTQVTVSS"
+import sys
 
-print("Target nanobody sequence (125 residues):")
-print(target_seq)
-print()
+try:
+    import anarci
+except ImportError:
+    print("ERROR: anarci is required. Install with: pip install anarci")
+    sys.exit(1)
 
-# Standard IMGT regions for VHH:
-# FR1: 1-26
-# CDR1: 27-38 (variable length)
-# FR2: 39-55
-# CDR2: 56-65 (variable length)
-# FR3: 66-104
-# CDR3: 105-117 (variable length)
-# FR4: 118-128
+TARGET_SEQ = "QVQLQESGGGSVQAGGSLRLSCAASGYTVRSSYMGWFRQVPGKQREAVAIITSGGTTYYADSVKGRFTISRDNAKNTLYLQMNSLKPEDTAMYYCAGRTGFIGGIWFRDRDYDYWGQGTQVTVSS"
 
-# For this specific sequence, let's identify regions by known patterns:
-# FR1 starts: QVQLQESG (conserved)
-# CDR1 typically after position 26
-# FR2 has WFRQ or WVRQ
-# CDR2 is short in VHH
-# FR3 is longest, has many conserved positions
-# CDR3 has variable sequence
-# FR4 ends: TVSS (conserved)
-
-# Find key conserved residues to align IMGT numbering:
-print("Finding conserved framework residues...")
-
-# FR1 positions (1-26 in IMGT)
-# Q1, V2, Q3, L4, Q5, E6, S7, G8, G9, G10
-# Our seq: QVQLQESGGGSVQAGGSLRLSC
-fr1_end = 26  # Typical FR1 end
-
-# FR2 starts around position 39 in IMGT
-# Look for WFRQ pattern (common in VHH)
-wfrq_pos = target_seq.find("WFRQ")
-print(f"WFRQ motif found at position: {wfrq_pos + 1}")
-
-# FR3 has many conserved positions
-# Look for ISRDNAK pattern (IMGT 76-82)
-isrdnak_pos = target_seq.find("ISRDNAK")
-if isrdnak_pos >= 0:
-    print(f"ISRDNAK motif found at position: {isrdnak_pos + 1}")
-    # IMGT 76 = sequential position isrdnak_pos + 1
-    imgt_76_seq = isrdnak_pos + 1
-else:
-    isrdnak_pos = target_seq.find("ISRDN")
-    print(f"ISRDN motif found at position: {isrdnak_pos + 1}")
-    imgt_76_seq = isrdnak_pos + 1
-
-# FR3-FR4 junction: Look for QGTQVTVSS or similar
-fr4_pattern = target_seq.find("QGTQVTVSS")
-if fr4_pattern >= 0:
-    print(f"FR4 pattern QGTQVTVSS found at position: {fr4_pattern + 1}")
-    # IMGT 118 typically starts FR4
-    imgt_118_seq = fr4_pattern + 1
-
-# Now create mapping table
-# For VHH without large insertions/deletions:
-# IMGT 1-26 = Sequential 1-26 (FR1)
-# IMGT 27-38 = Sequential 27-38 (CDR1)
-# IMGT 39-55 = Sequential 39-55 (FR2)
-# IMGT 56-65 = Sequential 56-65 (CDR2)
-# IMGT 66-104 = Sequential 66-104 (FR3)
-# IMGT 105-117 = Sequential 105-117 (CDR3)
-# IMGT 118-128 = Sequential 118-128 (FR4)
-
-# But our sequence is only 125 residues, so there might be slight compression
-
-# Let's use a more careful approach:
-# Check each mutation position manually
-
-mutations = [
-    ("Q", 1, "E"),
-    ("Q", 5, "V"),
-    ("S", 12, "L"),
-    ("A", 15, "P"),
-    ("G", 40, "S"),
-    ("V", 45, "A"),
-    ("A", 54, "S"),
-    ("I", 55, "V"),
-    ("A", 83, "S"),
-    ("K", 95, "R"),
-    ("P", 96, "A"),
+# 13 humanization mutations (IMGT numbering)
+# Identified by aligning to IGHV3-66 via IMGT DomainGapAlign
+# Hallmark residues excluded: F42, Q49, R50, A52
+MUTATIONS_IMGT = [
+    ("Q",   1, "E"),
+    ("Q",   5, "V"),
+    ("S",  12, "L"),
+    ("A",  15, "P"),
+    ("G",  40, "S"),
+    ("V",  45, "A"),
+    ("A",  54, "S"),
+    ("I",  55, "V"),
+    ("A",  83, "S"),
+    ("K",  95, "R"),
+    ("P",  96, "A"),
     ("M", 101, "V"),
     ("Q", 123, "L"),
 ]
 
-print("\n" + "="*80)
-print("MANUAL POSITION VERIFICATION")
-print("="*80)
+OUTPUT_FILE = "01_mutations_final.txt"
 
-# Print sequence with position markers
-print("\nSequence with 10-position markers:")
-for i in range(0, len(target_seq), 10):
-    print(f"{i+1:3d}: {target_seq[i:i+10]}")
 
-print("\n" + "="*80)
-print("CHECKING EACH MUTATION:")
-print("="*80)
+def build_imgt_to_seq_map(sequence):
+    """Use ANARCI to build IMGT position → sequential position mapping."""
+    numbered, _, _ = anarci.anarci(
+        [("nanobody", sequence)],
+        scheme="imgt",
+        allow={"H"},
+        assign_germline=False,
+    )
 
-verified_mutations = []
+    if numbered is None or numbered[0] is None:
+        print("ERROR: ANARCI failed to number the sequence.")
+        sys.exit(1)
 
-for wt, imgt_pos, mut in mutations:
-    print(f"\nIMGT {imgt_pos}: {wt} → {mut}")
+    domain, start, _ = numbered[0][0]
 
-    # For FR1 (IMGT 1-26), mapping is usually direct
-    if imgt_pos <= 26:
-        seq_pos = imgt_pos
-        actual = target_seq[seq_pos - 1] if seq_pos <= len(target_seq) else "?"
-        print(f"  FR1: IMGT {imgt_pos} → Sequential {seq_pos}")
-        print(f"  Expected: {wt}, Found: {actual}")
-        if actual == wt:
-            verified_mutations.append((wt, seq_pos, mut))
-            print(f"  ✓ MATCH")
+    # Build mapping: IMGT position (int) → (sequential_pos, amino_acid)
+    # All non-gap residues increment sequential index (including insertions)
+    imgt_to_seq = {}
+    seq_idx = start  # ANARCI returns 0-based start index into the sequence
+
+    for (pos, ins), aa in domain:
+        if aa == "-":
+            continue  # gap in IMGT numbering, no residue
+        seq_pos = seq_idx + 1  # 1-based PDB position
+        # Only store main positions (no insertion code) for framework mutations
+        if not ins.strip():
+            imgt_to_seq[pos] = (seq_pos, aa)
+        seq_idx += 1  # always increment for non-gap residues
+
+    return imgt_to_seq
+
+
+def main():
+    print(f"Target nanobody sequence ({len(TARGET_SEQ)} residues):")
+    print(TARGET_SEQ)
+    print()
+
+    # Step 1: Build IMGT → sequential mapping via ANARCI
+    print("Running ANARCI (IMGT scheme)...")
+    imgt_to_seq = build_imgt_to_seq_map(TARGET_SEQ)
+    print(f"  Mapped {len(imgt_to_seq)} IMGT positions to sequential positions.")
+    print()
+
+    # Step 2: Map and verify each mutation
+    print("=" * 70)
+    print("MUTATION MAPPING: IMGT → Sequential (PDB)")
+    print("=" * 70)
+    print(f"{'IMGT':>6}  {'WT':>3} → {'MUT':>3}  {'Seq Pos':>7}  {'Actual':>6}  {'Status'}")
+    print("-" * 70)
+
+    verified = []
+    errors = []
+
+    for wt, imgt_pos, mut in MUTATIONS_IMGT:
+        if imgt_pos not in imgt_to_seq:
+            print(f"{imgt_pos:>6}  {wt:>3} → {mut:>3}  {'N/A':>7}  {'N/A':>6}  ✗ IMGT position not found")
+            errors.append((wt, imgt_pos, mut, "IMGT position not in ANARCI output"))
+            continue
+
+        seq_pos, actual_aa = imgt_to_seq[imgt_pos]
+
+        if actual_aa == wt:
+            print(f"{imgt_pos:>6}  {wt:>3} → {mut:>3}  {seq_pos:>7}  {actual_aa:>6}  ✓ MATCH")
+            verified.append((wt, seq_pos, mut, imgt_pos))
         else:
-            # Search nearby
-            for offset in range(-5, 6):
-                test_pos = seq_pos + offset
-                if 0 < test_pos <= len(target_seq):
-                    if target_seq[test_pos - 1] == wt:
-                        print(f"  → Found {wt} at position {test_pos} (offset {offset})")
-                        verified_mutations.append((wt, test_pos, mut))
-                        break
+            print(f"{imgt_pos:>6}  {wt:>3} → {mut:>3}  {seq_pos:>7}  {actual_aa:>6}  ✗ MISMATCH (expected {wt}, got {actual_aa})")
+            errors.append((wt, imgt_pos, mut, f"Expected {wt} at seq {seq_pos}, found {actual_aa}"))
 
-    # For FR2 (IMGT 39-55)
-    elif 39 <= imgt_pos <= 55:
-        # FR2 might have slight shift
-        # Assume -3 residue shift (common in VHH)
-        seq_pos = imgt_pos - 3
-        actual = target_seq[seq_pos - 1] if seq_pos <= len(target_seq) else "?"
-        print(f"  FR2: IMGT {imgt_pos} → Sequential ~{seq_pos}")
-        print(f"  Expected: {wt}, Found: {actual}")
-        if actual == wt:
-            verified_mutations.append((wt, seq_pos, mut))
-            print(f"  ✓ MATCH")
-        else:
-            # Search nearby
-            for offset in range(-5, 6):
-                test_pos = imgt_pos + offset
-                if 0 < test_pos <= len(target_seq):
-                    if target_seq[test_pos - 1] == wt:
-                        print(f"  → Found {wt} at position {test_pos}")
-                        verified_mutations.append((wt, test_pos, mut))
-                        break
+    print("-" * 70)
+    print(f"Verified: {len(verified)} / {len(MUTATIONS_IMGT)}")
 
-    # For FR3 (IMGT 66-104)
-    elif 66 <= imgt_pos <= 104:
-        # FR3 might have shift
-        seq_pos = imgt_pos - 3  # Try -3 shift
-        actual = target_seq[seq_pos - 1] if seq_pos <= len(target_seq) else "?"
-        print(f"  FR3: IMGT {imgt_pos} → Sequential ~{seq_pos}")
-        print(f"  Expected: {wt}, Found: {actual}")
-        if actual == wt:
-            verified_mutations.append((wt, seq_pos, mut))
-            print(f"  ✓ MATCH")
-        else:
-            # Search in range
-            for offset in range(-10, 11):
-                test_pos = imgt_pos + offset
-                if 0 < test_pos <= len(target_seq):
-                    if target_seq[test_pos - 1] == wt:
-                        print(f"  → Found {wt} at position {test_pos} (IMGT{imgt_pos} offset {offset})")
-                        verified_mutations.append((wt, test_pos, mut))
-                        break
+    if errors:
+        print(f"\n⚠ ERRORS ({len(errors)}):")
+        for wt, imgt_pos, mut, msg in errors:
+            print(f"  IMGT {imgt_pos}: {wt}→{mut} — {msg}")
+        sys.exit(1)
 
-    # For FR4 (IMGT 118-128)
-    elif 118 <= imgt_pos <= 128:
-        # FR4: map to end of sequence
-        # IMGT 123 might be around position 120
-        seq_pos = len(target_seq) - (128 - imgt_pos)
-        actual = target_seq[seq_pos - 1] if seq_pos <= len(target_seq) else "?"
-        print(f"  FR4: IMGT {imgt_pos} → Sequential ~{seq_pos}")
-        print(f"  Expected: {wt}, Found: {actual}")
-        if actual == wt:
-            verified_mutations.append((wt, seq_pos, mut))
-            print(f"  ✓ MATCH")
-        else:
-            # Search nearby
-            for offset in range(-5, 6):
-                test_pos = seq_pos + offset
-                if 0 < test_pos <= len(target_seq):
-                    if target_seq[test_pos - 1] == wt:
-                        print(f"  → Found {wt} at position {test_pos}")
-                        verified_mutations.append((wt, test_pos, mut))
-                        break
+    # Step 3: Write Rosetta mutation file
+    with open(OUTPUT_FILE, "w") as f:
+        f.write(f"total {len(verified)}\n")
+        for wt, seq_pos, mut, imgt_pos in verified:
+            f.write("1\n")
+            f.write(f"{wt} {seq_pos} {mut}\n")
 
-print("\n" + "="*80)
-print(f"VERIFIED: {len(verified_mutations)} / {len(mutations)} mutations")
-print("="*80)
+    print(f"\n✓ Created: {OUTPUT_FILE}")
+    print(f"  Contains {len(verified)} mutations in Rosetta format")
 
-# Write corrected mutations file
-with open('01_mutations_corrected.txt', 'w') as f:
-    f.write(f"total {len(verified_mutations) + 1}\n")
+    # Step 4: Print mapping summary table
+    print(f"\n{'IMGT':>6} {'Region':>6} {'WT':>3}→{'MUT':>3} {'SeqPos':>6}")
+    print("-" * 35)
+    regions = {range(1, 27): "FR1", range(27, 39): "CDR1", range(39, 56): "FR2",
+               range(56, 66): "CDR2", range(66, 105): "FR3", range(105, 118): "CDR3",
+               range(118, 129): "FR4"}
+    for wt, seq_pos, mut, imgt_pos in verified:
+        region = next((r for rng, r in regions.items() if imgt_pos in rng), "?")
+        print(f"{imgt_pos:>6} {region:>6} {wt:>3}→{mut:>3} {seq_pos:>6}")
 
-    for wt, pos, mut in verified_mutations:
-        f.write("1\n")
-        f.write(f"{wt} {pos} {mut}\n")
 
-    f.write("1\n")
-    f.write("WT WT WT\n")
-
-print("\n✓ Created: 01_mutations_corrected.txt")
-print(f"  Contains {len(verified_mutations)} mutations + WT reference")
+if __name__ == "__main__":
+    main()
