@@ -1,0 +1,14 @@
+imgt,region,wt,candidate_mut,final_mut,ddg,std,final_ddg,wt_vh3_pct,mut_vh3_pct,accepted,reason
+1,FR1,Q,E,E,2.092,0.314,2.092,14.93,83.58,False,Destabilizing; Q present in 14.9% of VH3
+5,FR1,Q,V,V,-0.088,0.306,-0.088,0.0,97.00999999999999,True,Neutral ddG
+12,FR1,S,L,L,-3.538,2.953,-3.538,0.0,77.61,True,Stabilizing ddG
+15,FR1,A,P,P,6.043,0.367,6.043,0.0,100.0,False,Strongly destabilizing (backbone rigidity)
+40,FR2,G,S,S,-1.378,0.363,-1.378,0.0,31.34,True,Stabilizing ddG
+45,FR2,V,A,A,2.761,0.166,2.761,0.0,100.0,False,Destabilizing; ddG too high
+54,FR2,A,S,S,4.155,1.245,4.155,11.940000000000001,73.13,False,Destabilizing; A present in 11.9% of VH3
+55,FR2,I,V,L,2.525,0.197,-0.253,0.0,20.9,True,I55L selected from Set2 saturation (ddG = -0.25)
+83,FR3,A,S,S,-2.133,0.228,-2.133,40.300000000000004,59.699999999999996,True,Stabilizing ddG
+95,FR3,K,R,R,0.225,1.802,0.225,14.93,82.09,True,Neutral ddG (conservative K→R)
+96,FR3,P,A,A,3.44,0.907,3.44,1.49,79.10000000000001,False,"All variants destabilizing (Set2: P96V +3.68, P96D +5.62)"
+101,FR3,M,V,V,-2.266,0.832,-2.266,0.0,77.61,True,Stabilizing ddG
+123,FR4,Q,L,L,-0.595,0.912,-0.595,0.0,0.0,True,Stabilizing ddG

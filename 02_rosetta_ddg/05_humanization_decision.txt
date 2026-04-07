@@ -1,0 +1,23 @@
+====================================================================================================
+NANOBODY HUMANIZATION - FINAL DECISION SUMMARY
+====================================================================================================
+
+ IMGT Region  WT→MUT   ddG(REU)  WT in VH3  MUT in VH3   Decision  Reason
+----------------------------------------------------------------------------------------------------
+    1    FR1 Q→E      +2.09      14.9%       83.6%   ✗ REJECT  Destabilizing; Q present in 14.9% of VH3
+    5    FR1 Q→V      -0.09       0.0%       97.0%   ✓ ACCEPT  Neutral ddG
+   12    FR1 S→L      -3.54       0.0%       77.6%   ✓ ACCEPT  Stabilizing ddG
+   15    FR1 A→P      +6.04       0.0%      100.0%   ✗ REJECT  Strongly destabilizing (backbone rigidity)
+   40    FR2 G→S      -1.38       0.0%       31.3%   ✓ ACCEPT  Stabilizing ddG
+   45    FR2 V→A      +2.76       0.0%      100.0%   ✗ REJECT  Destabilizing; ddG too high
+   54    FR2 A→S      +4.16      11.9%       73.1%   ✗ REJECT  Destabilizing; A present in 11.9% of VH3
+   55    FR2 I→L      -0.25       0.0%       20.9%   ✓ ACCEPT  I55L selected from Set2 saturation (ddG = -0.25)
+   83    FR3 A→S      -2.13      40.3%       59.7%   ✓ ACCEPT  Stabilizing ddG
+   95    FR3 K→R      +0.23      14.9%       82.1%   ✓ ACCEPT  Neutral ddG (conservative K→R)
+   96    FR3 P→A      +3.44       1.5%       79.1%   ✗ REJECT  All variants destabilizing (Set2: P96V +3.68, P96D +5.62)
+  101    FR3 M→V      -2.27       0.0%       77.6%   ✓ ACCEPT  Stabilizing ddG
+  123    FR4 Q→L      -0.59       0.0%        0.0%   ✓ ACCEPT  Stabilizing ddG
+----------------------------------------------------------------------------------------------------
+
+Accepted: 8/13 mutations
+Final humanized mutations: Q5V, S12L, G40S, I55L, A83S, K95R, M101V, Q123L
