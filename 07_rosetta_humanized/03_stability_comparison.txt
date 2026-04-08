@@ -7,6 +7,6 @@ WT vs Humanized Stability Comparison
 
 2. FastRelax Total Score Comparison
    WT:        -438.05 ± 3.34 REU (n=5)
-   Humanized: -449.57 ± nan REU (n=1)
-   Difference: -11.52 REU
+   Humanized: -447.89 ± 1.49 REU (n=12)
+   Difference: -9.84 REU
    → Humanized more stable

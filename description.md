@@ -4,7 +4,7 @@
 
 본 연구는 종양 미세환경(Tumor Microenvironment, TME) 표적 다중 항체 생산을 위한 **인간화 나노바디 플랫폼**을 구축하는 것을 목표로 한다. 나노바디(VHH)는 낙타과 유래 단일 도메인 항체로, 기존 항체(IgG) 대비 소형(~15 kDa), 높은 조직 침투력, 우수한 안정성 등의 장점을 가지나, 임상 적용 시 면역원성(immunogenicity) 문제가 발생할 수 있다. 이를 해결하기 위해 나노바디의 framework(FR) 영역을 인간 germline 서열로 치환하는 인간화(humanization) 전략을 수립하고, 구조적 안정성을 유지하면서 인간 유사성을 극대화하는 최적 서열을 설계하였다.
 
-나아가, 인간화된 FR scaffold 위에 다양한 CDR 서열을 도입하여 신규 표적에 대한 나노바디 라이브러리를 구축하고, phage display를 통해 종양 미세환경 내 다양한 표적(CAF marker, immune checkpoint 등)에 결합하는 다중 항체를 선별하는 플랫폼을 구현한다.
+나아가, 인간화된 FR scaffold 위에 다양한 CDR 서열을 도입하여 신규 표적에 대한 나노바디 라이브러리를 구축하고, yeast display를 통해 종양 미세환경 내 다양한 표적(CAF marker, immune checkpoint 등)에 결합하는 다중 항체를 선별하는 플랫폼을 구현한다.
 
 ---
 
@@ -167,6 +167,22 @@ WT와 Humanized 구조 간 RMSD를 계산한 결과, all-atom 0.169 A, backbone 
 ![RMSD Comparison](06_humanness_score/figures/04_rmsd_comparison.png)
 
 ![Structure Overlay](06_humanness_score/figures/04_structure_overlay.png)
+
+### 5.2 Multi-mutant 안정성 검증
+
+개별 mutation의 ddG는 단일 치환에 대한 평가이므로, 8개 mutation을 동시에 도입했을 때의 복합 효과를 검증하기 위해 **multi-mutant Cartesian ddG** 계산을 수행하였다.
+
+![Energy Decomposition](07_rosetta_humanized/figures/01_energy_decomposition.png)
+
+8개 mutation 동시 적용 시 ddG = **-7.710 ± 0.198 REU**로, 인간화 서열이 WT 대비 열역학적으로 더 안정함을 확인하였다. 개별 ddG의 단순 합산(-10.02 REU)과 비교하면 epistatic effect는 **+2.31 REU**로, mutation 간 약한 상호작용이 존재하나 전체적으로 여전히 강하게 stabilizing하였다.
+
+![Epistatic Effect](07_rosetta_humanized/figures/01_epistatic_effect.png)
+
+에너지 항 분해 분석(energy decomposition)에서 fa_atr(van der Waals attractive)이 -9.30 REU로 가장 큰 안정화 기여를 보였으며, fa_dun(rotamer energy, -3.40 REU)과 p_aa_pp(Ramachandran probability, -1.46 REU)도 안정화에 기여하였다.
+
+추가로 **FastRelax** 프로토콜을 이용한 전체 에너지 비교에서도 Humanized(-447.89 ± 1.49 REU, n=12)가 WT(-438.05 ± 3.34 REU, n=5) 대비 **-9.84 REU** 낮은 총 에너지를 보여, 인간화에 의한 전체 구조 안정성 향상을 독립적으로 확인하였다. Humanized의 표준편차가 WT 대비 작은 것 또한 인간화 서열의 에너지 landscape가 더 좁고 안정적임을 시사한다.
+
+![Stability Comparison](07_rosetta_humanized/figures/03_stability_comparison.png)
 
 ---
 

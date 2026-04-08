@@ -432,4 +432,752 @@ core.pack.pack_rotamers: built 1991 rotamers at 125 positions.
 core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
 protocols.relax.FastRelax: CMD: repack  -535.946  0.750516  0.750516  0.022
 protocols.relax.FastRelax: CMD: scale:fa_rep  -533.54  0.750516  0.750516  0.02805
-core.pose.util: [ WARNING ] Unable to find atom_tree atom for thi
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -650.269  1.24784  1.24784  0.02805
+protocols.relax.FastRelax: CMD: coord_cst_weight  -650.269  1.24784  1.24784  0.02805
+protocols.relax.FastRelax: CMD: scale:fa_rep  -410.246  1.24784  1.24784  0.14575
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1842 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -412.503  1.24784  1.24784  0.14575
+protocols.relax.FastRelax: CMD: scale:fa_rep  -395.953  1.24784  1.24784  0.154
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -542.807  0.947787  0.947787  0.154
+protocols.relax.FastRelax: CMD: coord_cst_weight  -542.807  0.947787  0.947787  0.154
+protocols.relax.FastRelax: CMD: scale:fa_rep  -472.48  0.947787  0.947787  0.30745
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1792 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -472.49  0.947787  0.947787  0.30745
+protocols.relax.FastRelax: CMD: scale:fa_rep  -466.948  0.947787  0.947787  0.31955
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -490.721  0.833836  0.833836  0.31955
+protocols.relax.FastRelax: CMD: coord_cst_weight  -490.721  0.833836  0.833836  0.31955
+protocols.relax.FastRelax: CMD: scale:fa_rep  -435.617  0.833836  0.833836  0.55
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1763 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -435.664  0.833836  0.833836  0.55
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -448.445  0.747951  0.747951  0.55
+protocols.relax.FastRelax: MRP: 3  -448.445  -448.461  0.747044  0.747044  
+protocols.relax.FastRelax: CMD: accept_to_best  -448.445  0.747951  0.747951  0.55
+protocols.relax.FastRelax: CMD: endrepeat  -448.445  0.747951  0.747951  0.55
+protocols.relax.FastRelax: CMD: coord_cst_weight  -448.445  0.747951  0.747951  0.55
+protocols.relax.FastRelax: CMD: scale:fa_rep  -526.333  0.747951  0.747951  0.022
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1996 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -535.83  0.747951  0.747951  0.022
+protocols.relax.FastRelax: CMD: scale:fa_rep  -533.428  0.747951  0.747951  0.02805
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -650.306  1.25364  1.25364  0.02805
+protocols.relax.FastRelax: CMD: coord_cst_weight  -650.306  1.25364  1.25364  0.02805
+protocols.relax.FastRelax: CMD: scale:fa_rep  -410.341  1.25364  1.25364  0.14575
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1844 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -412.643  1.25364  1.25364  0.14575
+protocols.relax.FastRelax: CMD: scale:fa_rep  -396.099  1.25364  1.25364  0.154
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -542.851  0.943215  0.943215  0.154
+protocols.relax.FastRelax: CMD: coord_cst_weight  -542.851  0.943215  0.943215  0.154
+protocols.relax.FastRelax: CMD: scale:fa_rep  -472.531  0.943215  0.943215  0.30745
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1795 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -472.539  0.943215  0.943215  0.30745
+protocols.relax.FastRelax: CMD: scale:fa_rep  -466.997  0.943215  0.943215  0.31955
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -490.686  0.83525  0.83525  0.31955
+protocols.relax.FastRelax: CMD: coord_cst_weight  -490.686  0.83525  0.83525  0.31955
+protocols.relax.FastRelax: CMD: scale:fa_rep  -435.63  0.83525  0.83525  0.55
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1772 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -435.673  0.83525  0.83525  0.55
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -448.382  0.754706  0.754706  0.55
+protocols.relax.FastRelax: MRP: 4  -448.382  -448.461  0.747044  0.747044  
+protocols.relax.FastRelax: CMD: accept_to_best  -448.382  0.754706  0.754706  0.55
+protocols.relax.FastRelax: CMD: endrepeat  -448.382  0.754706  0.754706  0.55
+protocols::checkpoint: Deleting checkpoints of FastRelax
+protocols.jd2.JobDistributor: hum_fold_humanized_fap_nb_model_0_0002 reported success in 588 seconds
+protocols.jd2.PDBJobInputter: PDBJobInputter::pose_from_job
+protocols.jd2.PDBJobInputter: filling pose from PDB /home/laugh/rosetta/nanobody_humanization/07_rosetta_humanized/../01_structure_prediction/fold_humanized_fap_nb_model_0.cif
+core.import_pose.import_pose: File '/home/laugh/rosetta/nanobody_humanization/07_rosetta_humanized/../01_structure_prediction/fold_humanized_fap_nb_model_0.cif' automatically determined to be of type mmCIF from contents.
+core.conformation.Conformation: Found disulfide between residues 22 95
+core.energy_methods.CartesianBondedEnergy: Creating new peptide-bonded energy container (125)
+protocols.relax.FastRelax: CMD: repeat  -6.58102  0  0  0.55
+protocols.relax.FastRelax: CMD: coord_cst_weight  -6.58102  0  0  0.55
+protocols.relax.FastRelax: CMD: scale:fa_rep  -223.749  0  0  0.022
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 2045 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -335.403  0  0  0.022
+protocols.relax.FastRelax: CMD: scale:fa_rep  -330.738  0  0  0.02805
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -640.808  1.25526  1.25526  0.02805
+protocols.relax.FastRelax: CMD: coord_cst_weight  -640.808  1.25526  1.25526  0.02805
+protocols.relax.FastRelax: CMD: scale:fa_rep  -397.308  1.25526  1.25526  0.14575
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1813 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -400.493  1.25526  1.25526  0.14575
+protocols.relax.FastRelax: CMD: scale:fa_rep  -383.506  1.25526  1.25526  0.154
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -539.518  0.938163  0.938163  0.154
+protocols.relax.FastRelax: CMD: coord_cst_weight  -539.518  0.938163  0.938163  0.154
+protocols.relax.FastRelax: CMD: scale:fa_rep  -468.969  0.938163  0.938163  0.30745
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1768 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -468.969  0.938163  0.938163  0.30745
+protocols.relax.FastRelax: CMD: scale:fa_rep  -463.406  0.938163  0.938163  0.31955
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -487.113  0.859399  0.859399  0.31955
+protocols.relax.FastRelax: CMD: coord_cst_weight  -487.113  0.859399  0.859399  0.31955
+protocols.relax.FastRelax: CMD: scale:fa_rep  -431.67  0.859399  0.859399  0.55
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1744 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -431.782  0.859399  0.859399  0.55
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -446.01  0.772892  0.772892  0.55
+protocols.relax.FastRelax: MRP: 0  -446.01  -446.01  0.772892  0.772892  
+protocols.relax.FastRelax: CMD: accept_to_best  -446.01  0.772892  0.772892  0.55
+protocols.relax.FastRelax: CMD: endrepeat  -446.01  0.772892  0.772892  0.55
+protocols.relax.FastRelax: CMD: coord_cst_weight  -446.01  0.772892  0.772892  0.55
+protocols.relax.FastRelax: CMD: scale:fa_rep  -524.557  0.772892  0.772892  0.022
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1994 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -534.208  0.772892  0.772892  0.022
+protocols.relax.FastRelax: CMD: scale:fa_rep  -531.826  0.772892  0.772892  0.02805
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -648.752  1.24095  1.24095  0.02805
+protocols.relax.FastRelax: CMD: coord_cst_weight  -648.752  1.24095  1.24095  0.02805
+protocols.relax.FastRelax: CMD: scale:fa_rep  -409.256  1.24095  1.24095  0.14575
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1839 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -410.543  1.24095  1.24095  0.14575
+protocols.relax.FastRelax: CMD: scale:fa_rep  -393.879  1.24095  1.24095  0.154
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -541.427  0.960085  0.960085  0.154
+protocols.relax.FastRelax: CMD: coord_cst_weight  -541.427  0.960085  0.960085  0.154
+protocols.relax.FastRelax: CMD: scale:fa_rep  -470.745  0.960085  0.960085  0.30745
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1767 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -470.749  0.960085  0.960085  0.30745
+protocols.relax.FastRelax: CMD: scale:fa_rep  -465.179  0.960085  0.960085  0.31955
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -488.937  0.868036  0.868036  0.31955
+protocols.relax.FastRelax: CMD: coord_cst_weight  -488.937  0.868036  0.868036  0.31955
+protocols.relax.FastRelax: CMD: scale:fa_rep  -433.246  0.868036  0.868036  0.55
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1735 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -433.28  0.868036  0.868036  0.55
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -446.457  0.77286  0.77286  0.55
+protocols.relax.FastRelax: MRP: 1  -446.457  -446.457  0.77286  0.77286  
+protocols.relax.FastRelax: CMD: accept_to_best  -446.457  0.77286  0.77286  0.55
+protocols.relax.FastRelax: CMD: endrepeat  -446.457  0.77286  0.77286  0.55
+protocols.relax.FastRelax: CMD: coord_cst_weight  -446.457  0.77286  0.77286  0.55
+protocols.relax.FastRelax: CMD: scale:fa_rep  -524.791  0.77286  0.77286  0.022
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 2005 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -534.585  0.77286  0.77286  0.022
+protocols.relax.FastRelax: CMD: scale:fa_rep  -532.273  0.77286  0.77286  0.02805
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -649.235  1.25365  1.25365  0.02805
+protocols.relax.FastRelax: CMD: coord_cst_weight  -649.235  1.25365  1.25365  0.02805
+protocols.relax.FastRelax: CMD: scale:fa_rep  -407.658  1.25365  1.25365  0.14575
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1820 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -409.097  1.25365  1.25365  0.14575
+protocols.relax.FastRelax: CMD: scale:fa_rep  -392.292  1.25365  1.25365  0.154
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -541.284  0.966254  0.966254  0.154
+protocols.relax.FastRelax: CMD: coord_cst_weight  -541.284  0.966254  0.966254  0.154
+protocols.relax.FastRelax: CMD: scale:fa_rep  -470.195  0.966254  0.966254  0.30745
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1787 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -470.203  0.966254  0.966254  0.30745
+protocols.relax.FastRelax: CMD: scale:fa_rep  -464.6  0.966254  0.966254  0.31955
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -488.925  0.864047  0.864047  0.31955
+protocols.relax.FastRelax: CMD: coord_cst_weight  -488.925  0.864047  0.864047  0.31955
+protocols.relax.FastRelax: CMD: scale:fa_rep  -433.517  0.864047  0.864047  0.55
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1738 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -433.542  0.864047  0.864047  0.55
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -446.344  0.783001  0.783001  0.55
+protocols.relax.FastRelax: MRP: 2  -446.344  -446.457  0.77286  0.77286  
+protocols.relax.FastRelax: CMD: accept_to_best  -446.344  0.783001  0.783001  0.55
+protocols.relax.FastRelax: CMD: endrepeat  -446.344  0.783001  0.783001  0.55
+protocols.relax.FastRelax: CMD: coord_cst_weight  -446.344  0.783001  0.783001  0.55
+protocols.relax.FastRelax: CMD: scale:fa_rep  -525.17  0.783001  0.783001  0.022
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1992 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -534.933  0.783001  0.783001  0.022
+protocols.relax.FastRelax: CMD: scale:fa_rep  -532.609  0.783001  0.783001  0.02805
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -650.06  1.31006  1.31006  0.02805
+protocols.relax.FastRelax: CMD: coord_cst_weight  -650.06  1.31006  1.31006  0.02805
+protocols.relax.FastRelax: CMD: scale:fa_rep  -405.393  1.31006  1.31006  0.14575
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1830 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -406.91  1.31006  1.31006  0.14575
+protocols.relax.FastRelax: CMD: scale:fa_rep  -389.946  1.31006  1.31006  0.154
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -541.312  0.960995  0.960995  0.154
+protocols.relax.FastRelax: CMD: coord_cst_weight  -541.312  0.960995  0.960995  0.154
+protocols.relax.FastRelax: CMD: scale:fa_rep  -470.421  0.960995  0.960995  0.30745
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1767 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -470.421  0.960995  0.960995  0.30745
+protocols.relax.FastRelax: CMD: scale:fa_rep  -464.831  0.960995  0.960995  0.31955
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -488.676  0.874673  0.874673  0.31955
+protocols.relax.FastRelax: CMD: coord_cst_weight  -488.676  0.874673  0.874673  0.31955
+protocols.relax.FastRelax: CMD: scale:fa_rep  -432.895  0.874673  0.874673  0.55
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1757 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -432.953  0.874673  0.874673  0.55
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -446.387  0.77894  0.77894  0.55
+protocols.relax.FastRelax: MRP: 3  -446.387  -446.457  0.77286  0.77286  
+protocols.relax.FastRelax: CMD: accept_to_best  -446.387  0.77894  0.77894  0.55
+protocols.relax.FastRelax: CMD: endrepeat  -446.387  0.77894  0.77894  0.55
+protocols.relax.FastRelax: CMD: coord_cst_weight  -446.387  0.77894  0.77894  0.55
+protocols.relax.FastRelax: CMD: scale:fa_rep  -524.917  0.77894  0.77894  0.022
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1995 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -534.661  0.77894  0.77894  0.022
+protocols.relax.FastRelax: CMD: scale:fa_rep  -532.337  0.77894  0.77894  0.02805
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -649.039  1.25344  1.25344  0.02805
+protocols.relax.FastRelax: CMD: coord_cst_weight  -649.039  1.25344  1.25344  0.02805
+protocols.relax.FastRelax: CMD: scale:fa_rep  -408.039  1.25344  1.25344  0.14575
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1819 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -409.503  1.25344  1.25344  0.14575
+protocols.relax.FastRelax: CMD: scale:fa_rep  -392.741  1.25344  1.25344  0.154
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -541.273  0.966614  0.966614  0.154
+protocols.relax.FastRelax: CMD: coord_cst_weight  -541.273  0.966614  0.966614  0.154
+protocols.relax.FastRelax: CMD: scale:fa_rep  -470.312  0.966614  0.966614  0.30745
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1788 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -470.32  0.966614  0.966614  0.30745
+protocols.relax.FastRelax: CMD: scale:fa_rep  -464.728  0.966614  0.966614  0.31955
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -488.859  0.868513  0.868513  0.31955
+protocols.relax.FastRelax: CMD: coord_cst_weight  -488.859  0.868513  0.868513  0.31955
+protocols.relax.FastRelax: CMD: scale:fa_rep  -433.362  0.868513  0.868513  0.55
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1754 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -433.384  0.868513  0.868513  0.55
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+core.optimization.LineMinimizer: Inaccurate G in step= 9.53674e-09 Deriv= -0.00107294 Finite Diff= 0.00203848
+core.optimization.LineMinimizer: Inaccurate G in step= 3.74219e-06 Deriv= -4.15652 Finite Diff= 7.46951
+core.optimization.Minimizer: Line search failed even after resetting Hessian; aborting at iter#1378
+protocols.relax.FastRelax: CMD: min  -446.768  0.771799  0.771799  0.55
+protocols.relax.FastRelax: MRP: 4  -446.768  -446.768  0.771799  0.771799  
+protocols.relax.FastRelax: CMD: accept_to_best  -446.768  0.771799  0.771799  0.55
+protocols.relax.FastRelax: CMD: endrepeat  -446.768  0.771799  0.771799  0.55
+protocols::checkpoint: Deleting checkpoints of FastRelax
+protocols.jd2.JobDistributor: hum_fold_humanized_fap_nb_model_0_0003 reported success in 815 seconds
+protocols.jd2.PDBJobInputter: PDBJobInputter::pose_from_job
+protocols.jd2.PDBJobInputter: filling pose from PDB /home/laugh/rosetta/nanobody_humanization/07_rosetta_humanized/../01_structure_prediction/fold_humanized_fap_nb_model_0.cif
+core.import_pose.import_pose: File '/home/laugh/rosetta/nanobody_humanization/07_rosetta_humanized/../01_structure_prediction/fold_humanized_fap_nb_model_0.cif' automatically determined to be of type mmCIF from contents.
+core.conformation.Conformation: Found disulfide between residues 22 95
+core.energy_methods.CartesianBondedEnergy: Creating new peptide-bonded energy container (125)
+protocols.relax.FastRelax: CMD: repeat  -6.58102  0  0  0.55
+protocols.relax.FastRelax: CMD: coord_cst_weight  -6.58102  0  0  0.55
+protocols.relax.FastRelax: CMD: scale:fa_rep  -223.749  0  0  0.022
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 2045 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -335.855  0  0  0.022
+protocols.relax.FastRelax: CMD: scale:fa_rep  -331.189  0  0  0.02805
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -638.373  1.24609  1.24609  0.02805
+protocols.relax.FastRelax: CMD: coord_cst_weight  -638.373  1.24609  1.24609  0.02805
+protocols.relax.FastRelax: CMD: scale:fa_rep  -401.41  1.24609  1.24609  0.14575
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1862 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -404.044  1.24609  1.24609  0.14575
+protocols.relax.FastRelax: CMD: scale:fa_rep  -387.572  1.24609  1.24609  0.154
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -537.571  0.931412  0.931412  0.154
+protocols.relax.FastRelax: CMD: coord_cst_weight  -537.571  0.931412  0.931412  0.154
+protocols.relax.FastRelax: CMD: scale:fa_rep  -468.562  0.931412  0.931412  0.30745
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1809 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -468.59  0.931412  0.931412  0.30745
+protocols.relax.FastRelax: CMD: scale:fa_rep  -463.151  0.931412  0.931412  0.31955
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -486.774  0.83709  0.83709  0.31955
+protocols.relax.FastRelax: CMD: coord_cst_weight  -486.774  0.83709  0.83709  0.31955
+protocols.relax.FastRelax: CMD: scale:fa_rep  -432.596  0.83709  0.83709  0.55
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1784 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -432.746  0.83709  0.83709  0.55
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -445.964  0.75191  0.75191  0.55
+protocols.relax.FastRelax: MRP: 0  -445.964  -445.964  0.75191  0.75191  
+protocols.relax.FastRelax: CMD: accept_to_best  -445.964  0.75191  0.75191  0.55
+protocols.relax.FastRelax: CMD: endrepeat  -445.964  0.75191  0.75191  0.55
+protocols.relax.FastRelax: CMD: coord_cst_weight  -445.964  0.75191  0.75191  0.55
+protocols.relax.FastRelax: CMD: scale:fa_rep  -522.233  0.75191  0.75191  0.022
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 2017 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -532.709  0.75191  0.75191  0.022
+protocols.relax.FastRelax: CMD: scale:fa_rep  -530.362  0.75191  0.75191  0.02805
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -647.224  1.23669  1.23669  0.02805
+protocols.relax.FastRelax: CMD: coord_cst_weight  -647.224  1.23669  1.23669  0.02805
+protocols.relax.FastRelax: CMD: scale:fa_rep  -408.908  1.23669  1.23669  0.14575
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1864 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -410.428  1.23669  1.23669  0.14575
+protocols.relax.FastRelax: CMD: scale:fa_rep  -393.894  1.23669  1.23669  0.154
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -540.489  0.942666  0.942666  0.154
+protocols.relax.FastRelax: CMD: coord_cst_weight  -540.489  0.942666  0.942666  0.154
+protocols.relax.FastRelax: CMD: scale:fa_rep  -470.41  0.942666  0.942666  0.30745
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1811 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -470.417  0.942666  0.942666  0.30745
+protocols.relax.FastRelax: CMD: scale:fa_rep  -464.894  0.942666  0.942666  0.31955
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -488.437  0.848628  0.848628  0.31955
+protocols.relax.FastRelax: CMD: coord_cst_weight  -488.437  0.848628  0.848628  0.31955
+protocols.relax.FastRelax: CMD: scale:fa_rep  -433.438  0.848628  0.848628  0.55
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1781 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -433.481  0.848628  0.848628  0.55
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -446.892  0.746503  0.746503  0.55
+protocols.relax.FastRelax: MRP: 1  -446.892  -446.892  0.746503  0.746503  
+protocols.relax.FastRelax: CMD: accept_to_best  -446.892  0.746503  0.746503  0.55
+protocols.relax.FastRelax: CMD: endrepeat  -446.892  0.746503  0.746503  0.55
+protocols.relax.FastRelax: CMD: coord_cst_weight  -446.892  0.746503  0.746503  0.55
+protocols.relax.FastRelax: CMD: scale:fa_rep  -523.113  0.746503  0.746503  0.022
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 2027 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -532.464  0.746503  0.746503  0.022
+protocols.relax.FastRelax: CMD: scale:fa_rep  -530.273  0.746503  0.746503  0.02805
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -647.34  1.25121  1.25121  0.02805
+protocols.relax.FastRelax: CMD: coord_cst_weight  -647.34  1.25121  1.25121  0.02805
+protocols.relax.FastRelax: CMD: scale:fa_rep  -408.394  1.25121  1.25121  0.14575
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1867 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -409.895  1.25121  1.25121  0.14575
+protocols.relax.FastRelax: CMD: scale:fa_rep  -393.286  1.25121  1.25121  0.154
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -540.524  0.944558  0.944558  0.154
+protocols.relax.FastRelax: CMD: coord_cst_weight  -540.524  0.944558  0.944558  0.154
+protocols.relax.FastRelax: CMD: scale:fa_rep  -470.503  0.944558  0.944558  0.30745
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1815 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -470.503  0.944558  0.944558  0.30745
+protocols.relax.FastRelax: CMD: scale:fa_rep  -464.982  0.944558  0.944558  0.31955
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -488.51  0.846756  0.846756  0.31955
+protocols.relax.FastRelax: CMD: coord_cst_weight  -488.51  0.846756  0.846756  0.31955
+protocols.relax.FastRelax: CMD: scale:fa_rep  -433.579  0.846756  0.846756  0.55
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1780 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -433.628  0.846756  0.846756  0.55
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -446.605  0.751545  0.751545  0.55
+protocols.relax.FastRelax: MRP: 2  -446.605  -446.892  0.746503  0.746503  
+protocols.relax.FastRelax: CMD: accept_to_best  -446.605  0.751545  0.751545  0.55
+protocols.relax.FastRelax: CMD: endrepeat  -446.605  0.751545  0.751545  0.55
+protocols.relax.FastRelax: CMD: coord_cst_weight  -446.605  0.751545  0.751545  0.55
+protocols.relax.FastRelax: CMD: scale:fa_rep  -523.759  0.751545  0.751545  0.022
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 2038 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -533.197  0.751545  0.751545  0.022
+protocols.relax.FastRelax: CMD: scale:fa_rep  -530.919  0.751545  0.751545  0.02805
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -647.448  1.26351  1.26351  0.02805
+protocols.relax.FastRelax: CMD: coord_cst_weight  -647.448  1.26351  1.26351  0.02805
+protocols.relax.FastRelax: CMD: scale:fa_rep  -407.081  1.26351  1.26351  0.14575
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1864 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -408.537  1.26351  1.26351  0.14575
+protocols.relax.FastRelax: CMD: scale:fa_rep  -391.874  1.26351  1.26351  0.154
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -540.358  0.955366  0.955366  0.154
+protocols.relax.FastRelax: CMD: coord_cst_weight  -540.358  0.955366  0.955366  0.154
+protocols.relax.FastRelax: CMD: scale:fa_rep  -470.125  0.955366  0.955366  0.30745
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1812 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -470.125  0.955366  0.955366  0.30745
+protocols.relax.FastRelax: CMD: scale:fa_rep  -464.586  0.955366  0.955366  0.31955
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -488.438  0.852863  0.852863  0.31955
+protocols.relax.FastRelax: CMD: coord_cst_weight  -488.438  0.852863  0.852863  0.31955
+protocols.relax.FastRelax: CMD: scale:fa_rep  -433.354  0.852863  0.852863  0.55
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1780 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -433.401  0.852863  0.852863  0.55
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -446.371  0.760362  0.760362  0.55
+protocols.relax.FastRelax: MRP: 3  -446.371  -446.892  0.746503  0.746503  
+protocols.relax.FastRelax: CMD: accept_to_best  -446.371  0.760362  0.760362  0.55
+protocols.relax.FastRelax: CMD: endrepeat  -446.371  0.760362  0.760362  0.55
+protocols.relax.FastRelax: CMD: coord_cst_weight  -446.371  0.760362  0.760362  0.55
+protocols.relax.FastRelax: CMD: scale:fa_rep  -524.206  0.760362  0.760362  0.022
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 2011 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -533.459  0.760362  0.760362  0.022
+protocols.relax.FastRelax: CMD: scale:fa_rep  -531.145  0.760362  0.760362  0.02805
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -647.135  1.24911  1.24911  0.02805
+protocols.relax.FastRelax: CMD: coord_cst_weight  -647.135  1.24911  1.24911  0.02805
+protocols.relax.FastRelax: CMD: scale:fa_rep  -408.39  1.24911  1.24911  0.14575
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1862 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -409.867  1.24911  1.24911  0.14575
+protocols.relax.FastRelax: CMD: scale:fa_rep  -393.269  1.24911  1.24911  0.154
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -540.514  0.946827  0.946827  0.154
+protocols.relax.FastRelax: CMD: coord_cst_weight  -540.514  0.946827  0.946827  0.154
+protocols.relax.FastRelax: CMD: scale:fa_rep  -470.45  0.946827  0.946827  0.30745
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1812 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -470.458  0.946827  0.946827  0.30745
+protocols.relax.FastRelax: CMD: scale:fa_rep  -464.936  0.946827  0.946827  0.31955
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -488.572  0.848385  0.848385  0.31955
+protocols.relax.FastRelax: CMD: coord_cst_weight  -488.572  0.848385  0.848385  0.31955
+protocols.relax.FastRelax: CMD: scale:fa_rep  -433.776  0.848385  0.848385  0.55
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1781 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -433.825  0.848385  0.848385  0.55
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -446.323  0.766776  0.766776  0.55
+protocols.relax.FastRelax: MRP: 4  -446.323  -446.892  0.746503  0.746503  
+protocols.relax.FastRelax: CMD: accept_to_best  -446.323  0.766776  0.766776  0.55
+protocols.relax.FastRelax: CMD: endrepeat  -446.323  0.766776  0.766776  0.55
+protocols::checkpoint: Deleting checkpoints of FastRelax
+protocols.jd2.JobDistributor: hum_fold_humanized_fap_nb_model_0_0004 reported success in 722 seconds
+protocols.jd2.PDBJobInputter: PDBJobInputter::pose_from_job
+protocols.jd2.PDBJobInputter: filling pose from PDB /home/laugh/rosetta/nanobody_humanization/07_rosetta_humanized/../01_structure_prediction/fold_humanized_fap_nb_model_0.cif
+core.import_pose.import_pose: File '/home/laugh/rosetta/nanobody_humanization/07_rosetta_humanized/../01_structure_prediction/fold_humanized_fap_nb_model_0.cif' automatically determined to be of type mmCIF from contents.
+core.conformation.Conformation: Found disulfide between residues 22 95
+core.energy_methods.CartesianBondedEnergy: Creating new peptide-bonded energy container (125)
+protocols.relax.FastRelax: CMD: repeat  -6.58102  0  0  0.55
+protocols.relax.FastRelax: CMD: coord_cst_weight  -6.58102  0  0  0.55
+protocols.relax.FastRelax: CMD: scale:fa_rep  -223.749  0  0  0.022
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 2045 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -335.165  0  0  0.022
+protocols.relax.FastRelax: CMD: scale:fa_rep  -330.559  0  0  0.02805
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -638.032  1.2427  1.2427  0.02805
+protocols.relax.FastRelax: CMD: coord_cst_weight  -638.032  1.2427  1.2427  0.02805
+protocols.relax.FastRelax: CMD: scale:fa_rep  -399.698  1.2427  1.2427  0.14575
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1841 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -402.948  1.2427  1.2427  0.14575
+protocols.relax.FastRelax: CMD: scale:fa_rep  -386.52  1.2427  1.2427  0.154
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -539.677  0.924764  0.924764  0.154
+protocols.relax.FastRelax: CMD: coord_cst_weight  -539.677  0.924764  0.924764  0.154
+protocols.relax.FastRelax: CMD: scale:fa_rep  -470.309  0.924764  0.924764  0.30745
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1785 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -470.334  0.924764  0.924764  0.30745
+protocols.relax.FastRelax: CMD: scale:fa_rep  -464.866  0.924764  0.924764  0.31955
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -488.744  0.814397  0.814397  0.31955
+protocols.relax.FastRelax: CMD: coord_cst_weight  -488.744  0.814397  0.814397  0.31955
+protocols.relax.FastRelax: CMD: scale:fa_rep  -434.483  0.814397  0.814397  0.55
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1767 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -434.562  0.814397  0.814397  0.55
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -447.486  0.719922  0.719922  0.55
+protocols.relax.FastRelax: MRP: 0  -447.486  -447.486  0.719922  0.719922  
+protocols.relax.FastRelax: CMD: accept_to_best  -447.486  0.719922  0.719922  0.55
+protocols.relax.FastRelax: CMD: endrepeat  -447.486  0.719922  0.719922  0.55
+protocols.relax.FastRelax: CMD: coord_cst_weight  -447.486  0.719922  0.719922  0.55
+protocols.relax.FastRelax: CMD: scale:fa_rep  -524.029  0.719922  0.719922  0.022
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1981 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -534.535  0.719922  0.719922  0.022
+protocols.relax.FastRelax: CMD: scale:fa_rep  -532.063  0.719922  0.719922  0.02805
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -650.302  1.23371  1.23371  0.02805
+protocols.relax.FastRelax: CMD: coord_cst_weight  -650.302  1.23371  1.23371  0.02805
+protocols.relax.FastRelax: CMD: scale:fa_rep  -411.697  1.23371  1.23371  0.14575
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1819 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -413.956  1.23371  1.23371  0.14575
+protocols.relax.FastRelax: CMD: scale:fa_rep  -397.506  1.23371  1.23371  0.154
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -543.852  0.929519  0.929519  0.154
+protocols.relax.FastRelax: CMD: coord_cst_weight  -543.852  0.929519  0.929519  0.154
+protocols.relax.FastRelax: CMD: scale:fa_rep  -474.276  0.929519  0.929519  0.30745
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1779 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -474.364  0.929519  0.929519  0.30745
+protocols.relax.FastRelax: CMD: scale:fa_rep  -468.881  0.929519  0.929519  0.31955
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -492.444  0.826775  0.826775  0.31955
+protocols.relax.FastRelax: CMD: coord_cst_weight  -492.444  0.826775  0.826775  0.31955
+protocols.relax.FastRelax: CMD: scale:fa_rep  -437.498  0.826775  0.826775  0.55
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1768 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -437.498  0.826775  0.826775  0.55
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -450.151  0.747947  0.747947  0.55
+protocols.relax.FastRelax: MRP: 1  -450.151  -450.151  0.747947  0.747947  
+protocols.relax.FastRelax: CMD: accept_to_best  -450.151  0.747947  0.747947  0.55
+protocols.relax.FastRelax: CMD: endrepeat  -450.151  0.747947  0.747947  0.55
+protocols.relax.FastRelax: CMD: coord_cst_weight  -450.151  0.747947  0.747947  0.55
+protocols.relax.FastRelax: CMD: scale:fa_rep  -527.915  0.747947  0.747947  0.022
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1981 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -537.385  0.747947  0.747947  0.022
+protocols.relax.FastRelax: CMD: scale:fa_rep  -535.075  0.747947  0.747947  0.02805
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -651.213  1.25614  1.25614  0.02805
+protocols.relax.FastRelax: CMD: coord_cst_weight  -651.213  1.25614  1.25614  0.02805
+protocols.relax.FastRelax: CMD: scale:fa_rep  -414.572  1.25614  1.25614  0.14575
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1850 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -416.173  1.25614  1.25614  0.14575
+protocols.relax.FastRelax: CMD: scale:fa_rep  -399.849  1.25614  1.25614  0.154
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -544.964  0.953329  0.953329  0.154
+protocols.relax.FastRelax: CMD: coord_cst_weight  -544.964  0.953329  0.953329  0.154
+protocols.relax.FastRelax: CMD: scale:fa_rep  -475.375  0.953329  0.953329  0.30745
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1797 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -475.375  0.953329  0.953329  0.30745
+protocols.relax.FastRelax: CMD: scale:fa_rep  -469.887  0.953329  0.953329  0.31955
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -492.33  0.840941  0.840941  0.31955
+protocols.relax.FastRelax: CMD: coord_cst_weight  -492.33  0.840941  0.840941  0.31955
+protocols.relax.FastRelax: CMD: scale:fa_rep  -437.332  0.840941  0.840941  0.55
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1753 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -437.332  0.840941  0.840941  0.55
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -450.081  0.755354  0.755354  0.55
+protocols.relax.FastRelax: MRP: 2  -450.081  -450.151  0.747947  0.747947  
+protocols.relax.FastRelax: CMD: accept_to_best  -450.081  0.755354  0.755354  0.55
+protocols.relax.FastRelax: CMD: endrepeat  -450.081  0.755354  0.755354  0.55
+protocols.relax.FastRelax: CMD: coord_cst_weight  -450.081  0.755354  0.755354  0.55
+protocols.relax.FastRelax: CMD: scale:fa_rep  -527.884  0.755354  0.755354  0.022
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1980 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -537.352  0.755354  0.755354  0.022
+protocols.relax.FastRelax: CMD: scale:fa_rep  -535.028  0.755354  0.755354  0.02805
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -651.174  1.2538  1.2538  0.02805
+protocols.relax.FastRelax: CMD: coord_cst_weight  -651.174  1.2538  1.2538  0.02805
+protocols.relax.FastRelax: CMD: scale:fa_rep  -414.591  1.2538  1.2538  0.14575
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1848 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -416.159  1.2538  1.2538  0.14575
+protocols.relax.FastRelax: CMD: scale:fa_rep  -399.837  1.2538  1.2538  0.154
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -542.431  0.968386  0.968386  0.154
+protocols.relax.FastRelax: CMD: coord_cst_weight  -542.431  0.968386  0.968386  0.154
+protocols.relax.FastRelax: CMD: scale:fa_rep  -472.449  0.968386  0.968386  0.30745
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1792 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -472.604  0.968386  0.968386  0.30745
+protocols.relax.FastRelax: CMD: scale:fa_rep  -467.076  0.968386  0.968386  0.31955
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -492.363  0.844298  0.844298  0.31955
+protocols.relax.FastRelax: CMD: coord_cst_weight  -492.363  0.844298  0.844298  0.31955
+protocols.relax.FastRelax: CMD: scale:fa_rep  -437.459  0.844298  0.844298  0.55
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1749 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -437.459  0.844298  0.844298  0.55
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -450.075  0.756234  0.756234  0.55
+protocols.relax.FastRelax: MRP: 3  -450.075  -450.151  0.747947  0.747947  
+protocols.relax.FastRelax: CMD: accept_to_best  -450.075  0.756234  0.756234  0.55
+protocols.relax.FastRelax: CMD: endrepeat  -450.075  0.756234  0.756234  0.55
+protocols.relax.FastRelax: CMD: coord_cst_weight  -450.075  0.756234  0.756234  0.55
+protocols.relax.FastRelax: CMD: scale:fa_rep  -527.873  0.756234  0.756234  0.022
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1981 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -537.373  0.756234  0.756234  0.022
+protocols.relax.FastRelax: CMD: scale:fa_rep  -535.054  0.756234  0.756234  0.02805
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -651.194  1.25552  1.25552  0.02805
+protocols.relax.FastRelax: CMD: coord_cst_weight  -651.194  1.25552  1.25552  0.02805
+protocols.relax.FastRelax: CMD: scale:fa_rep  -414.486  1.25552  1.25552  0.14575
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1851 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -414.991  1.25552  1.25552  0.14575
+protocols.relax.FastRelax: CMD: scale:fa_rep  -398.67  1.25552  1.25552  0.154
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -543.07  0.967217  0.967217  0.154
+protocols.relax.FastRelax: CMD: coord_cst_weight  -543.07  0.967217  0.967217  0.154
+protocols.relax.FastRelax: CMD: scale:fa_rep  -472.73  0.967217  0.967217  0.30745
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1793 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -472.866  0.967217  0.967217  0.30745
+protocols.relax.FastRelax: CMD: scale:fa_rep  -467.31  0.967217  0.967217  0.31955
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -492.723  0.848433  0.848433  0.31955
+protocols.relax.FastRelax: CMD: coord_cst_weight  -492.723  0.848433  0.848433  0.31955
+protocols.relax.FastRelax: CMD: scale:fa_rep  -437.704  0.848433  0.848433  0.55
+core.pack.task: Packer task: initialize from command line() 
+core.pack.pack_rotamers: built 1769 rotamers at 125 positions.
+core.pack.interaction_graph.interaction_graph_factory: Instantiating DensePDInteractionGraph
+protocols.relax.FastRelax: CMD: repack  -437.704  0.848433  0.848433  0.55
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 22 BRANCH 1
+core.pose.util: [ WARNING ] Unable to find atom_tree atom for this Rosetta branch connection angle: residue 95 BRANCH 1
+protocols.relax.FastRelax: CMD: min  -450.476  0.756375  0.756375  0.55
+protocols.relax.FastRelax: MRP: 4  -450.476  -450.476  0.756375  0.756375  
+protocols.relax.FastRelax: CMD: accept_to_best  -450.476  0.756375  0.756375  0.55
+protocols.relax.FastRelax: CMD: endrepeat  -450.476  0.756375  0.756375  0.55
+protocols::checkpoint: Deleting checkpoints of FastRelax
+protocols.jd2.JobDistributor: hum_fold_humanized_fap_nb_model_0_0005 reported success in 659 seconds
+protocols.jd2.JobDistributor: no more batches to process... 
+protocols.jd2.JobDistributor: 5 jobs considered, 5 jobs attempted in 3426 seconds
+basic.citation_manager.CitationManager: 
+The following Rosetta modules were used during this run of Rosetta, and should be cited:
+
+FastRelax Mover's citation(s):
+*Tyka MD, *Keedy DA, André I, Dimaio F, Song Y, Richardson DC, Richardson JS, and Baker D.  (2011).  Alternate states of proteins revealed by detailed energy landscape mapping.  J Mol Biol 405(2):607-18.  doi: 10.1016/j.jmb.2010.11.008.  (*Co-primary authors.)
+
+Khatib F, Cooper S, Tyka MD, Xu K, Makedon I, Popovic Z, Baker D, and Players F.  (2011).  Algorithm discovery by protein folding game players.  Proc Natl Acad Sci USA 108(47):18949-53.  doi: 10.1073/pnas.1115898108.
+
+Maguire JB, Haddox HK, Strickland D, Halabiya SF, Coventry B, Griffin JR, Pulavarti SVSRK, Cummins M, Thieker DF, Klavins E, Szyperski T, DiMaio F, Baker D, and Kuhlman B.  (2021).  Perturbing the energy landscape for improved packing during computational protein design.  Proteins 89(4):436-449.  doi: 10.1002/prot.26030.
+
+

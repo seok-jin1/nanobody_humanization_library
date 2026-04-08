@@ -92,6 +92,9 @@ def parse_ddg_file(filepath):
 def main():
     wt_scores = parse_scorefile(WT_SC)
     hum_scores = parse_scorefile(HUM_SC)
+    # Also include remaining humanized relax results
+    HUM_SC_REMAINING = os.path.join(SCRIPT_DIR, "02_relax_humanized_remaining.sc")
+    hum_scores.extend(parse_scorefile(HUM_SC_REMAINING))
     ddg, ddg_std = parse_ddg_file(DDG_FILE)
 
     has_relax = bool(wt_scores and hum_scores)
