@@ -2,7 +2,7 @@
 
 Computational pipeline for humanizing an anti-FAP nanobody (CN106928368B) using structure-guided framework engineering and CDR library design.
 
-> 자세한 연구 기록 (한글, figure 포함): [description.md](./description.md)
+> Detailed research writeup with figures: [description.md](./description.md)
 
 ## Overview
 
