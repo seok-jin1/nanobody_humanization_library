@@ -6,6 +6,14 @@ This study aims to establish a **humanized nanobody platform** for producing mul
 
 Building on this humanized FR scaffold, we construct nanobody libraries against novel targets by introducing diverse CDR sequences, and implement a platform that uses yeast display to select multi-specific antibodies binding to various targets within the tumor microenvironment (CAF markers, immune checkpoints, etc.).
 
+![Platform Overview](figures/00_platform_overview.png)
+
+**Figure 1. Humanized nanobody platform — four-module workflow.**
+(1) **Germline Identification** — IMGT DomainGapAlign selects IGHV3-66*01 as the humanization target, yielding 13 framework mutation candidates after excluding 4 VHH hallmark residues from the 17 framework differences.
+(2) **Structure & Stability Optimization** — AlphaFold3 structure prediction, Rosetta Cartesian ddG, and OGRDB VH3 germline frequency analysis are jointly used to select 8 mutations, raising FR identity from 80.0% to 87.5% while preserving structural stability.
+(3) **CDR Library Design** — Per-position amino-acid frequencies from the SAbDab-nano database are used to design diverse CDR1/CDR2/CDR3 on the humanized FR scaffold, synthesized via trimer phosphoramidite chemistry.
+(4) **Library Selection & Characterization** — The yeast-displayed library is enriched by magnetic separation and fluorescence-activated sorting, and selected colonies are characterized by Kd measurement.
+
 ---
 
 ## 2. Model Nanobody Selection and Experimental Validation
@@ -211,6 +219,10 @@ Sequence diversity was quantified by calculating Shannon entropy at each IMGT po
 ### 6.3 Library Construction Strategy
 
 Integrating the above analyses, we decided to synthesize the CDR library on the humanized FR scaffold using trimer phosphoramidite chemistry. Trimer phosphoramidite enables codon-level synthesis, excluding stop codons and allowing precise control of amino acid ratios at each position.
+
+![CDR Library Design](04_sabdab_nano_analysis/figures/06_cdr_library_design.png)
+
+**Figure. CDR library layout on the humanized FR scaffold.** CDR1 and CDR2 are fixed at 8 residues, while CDR3 is produced in three length variants (14, 17, and 21 residues) to capture the major modes of the SAbDab-nano CDR3 length distribution. Solid circles denote positions fixed to the WT nanobody residue, and dashed circles denote variable positions whose allowed amino acids — derived from the SAbDab-nano per-position frequencies — are listed inside each position. The fixed humanized framework is held constant across the entire library.
 
 ---
 
